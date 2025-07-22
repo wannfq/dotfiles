@@ -1,8 +1,8 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    lazy = false,
-    -- event = "VeryLazy",
+    lazy = true,
+    event = "VeryLazy",
     config = function()
         local configs = require "nvim-treesitter.configs"
         -- https://github.com/nvim-treesitter/nvim-treesitter
