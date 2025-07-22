@@ -1,0 +1,31 @@
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[mgr]
+ratio = [2, 3, 3]
+show_hidden = true
+
+[opener]
+edit = [
+  { run = 'nvim "$@"', desc = "Neovim", block = true, for = "unix" },
+  { run = 'code "$@"', desc = "VS Code", orphan = true, for = "unix" },
+]
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"
+
+[plugin]
+prepend_previewers = [
+  { name = "*.csv", run = "rich-preview" },  # for csv files
+  { name = "*.md", run = "rich-preview" },  # for markdown (.md) files
+  { name = "*.rst", run = "rich-preview" },  # for restructured text (.rst) files
+  { name = "*.ipynb", run = "rich-preview" },  # for jupyter notebooks (.ipynb)
+  # { name = "*.json", run = "rich-preview" },  # for json (.json) files
+  # { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
+]

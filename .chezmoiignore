@@ -1,0 +1,15 @@
+**/.DS_Store
+**/*.log
+**/*.local
+
+# zsh
+.config/zsh/.oh-my-zsh/**
+.config/zsh/.zsh_history
+.config/zsh/.zcompdump*
+
+# yazi
+.config/yazi/flavors/**
+.config/yazi/plugins/**
+
+# tmux
+.config/tmux/plugins/**

@@ -1,0 +1,10 @@
+"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
+[mgr]
+prepend_keymap = [
+  { on = ["c", "m"], run = "plugin chmod", desc = "Chmod on selected files" },
+  { on = "<Enter>", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+  { on = "<A-p>", run = "plugin toggle-pane min-preview", desc = "Hide or show preview pane" },
+  { on = "M", run = "plugin toggle-pane max-preview", desc = "Maximize or restore preview pane" },
+  { on = ["g", "i"], run = "plugin lazygit", desc = "run lazygit" },
+]
