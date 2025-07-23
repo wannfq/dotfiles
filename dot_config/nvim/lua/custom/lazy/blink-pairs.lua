@@ -1,9 +1,9 @@
 return {
-    'saghen/blink.pairs',
-    version = '*', -- (recommended) only required with prebuilt binaries
+    "saghen/blink.pairs",
+    version = "*", -- (recommended) only required with prebuilt binaries
     lazy = true,
-    event = { "BufReadPost", "InsertEnter", "CmdlineEnter" },
-    dependencies = 'saghen/blink.download',
+    event = { "BufReadPre", "InsertEnter", "CmdlineEnter" },
+    dependencies = "saghen/blink.download",
     opts = {
         mappings = {
             -- you can call require("blink.pairs.mappings").enable() and require("blink.pairs.mappings").disable()
@@ -18,14 +18,14 @@ return {
             enabled = true,
             groups = {
                 -- 'BlinkPairsOrange',
-                'BlinkPairsPurple',
-                'BlinkPairsBlue',
+                "BlinkPairsPurple",
+                "BlinkPairsBlue",
             },
             matchparen = {
                 enabled = true,
-                group = 'MatchParen',
+                group = "MatchParen",
             },
         },
         debug = false,
-    }
+    },
 }

@@ -1,7 +1,7 @@
 return {
     "kevinhwang91/nvim-ufo",
     lazy = true,
-    event = { "BufReadPost", "BufNewFile" },
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         "kevinhwang91/promise-async",
         "neovim/nvim-lspconfig",

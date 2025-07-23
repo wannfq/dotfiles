@@ -1,7 +1,7 @@
 return {
     "folke/trouble.nvim",
     lazy = true,
-    event = { "BufNewFile", "BufReadPost" },
+    event = { "BufReadPre", "BufNewFile" },
     cmd = "Trouble",
     opts = {
         auto_preview = true,

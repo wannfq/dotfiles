@@ -5,14 +5,14 @@ return {
             "nvim-treesitter/nvim-treesitter",
         },
         lazy = true,
-        event = "BufReadPost",
+        event = "BufReadPre",
     },
 
     {
         "toppair/peek.nvim",
         build = "deno task --quiet build:fast",
         lazy = true,
-        event = "BufReadPost",
+        event = "BufReadPre",
         config = function()
             local peek = require "peek"
             peek.setup {
