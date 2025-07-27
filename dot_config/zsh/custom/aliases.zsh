@@ -42,16 +42,17 @@ alias kns=kubens
 alias mk=minikube
 alias mkk=minikube kubectl --
 
-# Terraform to tf
-if [ -x "$(command -v terraform)" ]; then
-    alias tf=terraform
-fi
+# Opentofu to tf
+alias tf=tofu
 
 # git alias
 alias g=git
 
 # Lazygit alias
 alias lg=lazygit
+
+# Lazydocker aliase
+alias ld=lazydocker
 
 # Startup profiler
 alias prof="time ZSH_DEBUGRC=1 zsh -i -c exit"

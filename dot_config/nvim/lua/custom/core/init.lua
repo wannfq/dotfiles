@@ -1,2 +1,3 @@
-require("custom.core.settings")
-require("custom.core.remap")
+require "lua.custom.core.globals"
+require "lua.custom.core.options"
+require "lua.custom.core.kemaps"
