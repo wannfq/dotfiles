@@ -1,8 +1,11 @@
 return {
     "stevearc/conform.nvim",
     lazy = true,
-    event = { "BufWritePre" },
+    event = { "BufReadPost", "BufWritePre" },
     cmd = { "ConformInfo" },
+    dependencies = {
+        "williamboman/mason.nvim",
+    },
     keys = {
         {
             "<leader>bf",
@@ -28,7 +31,7 @@ return {
             formatters_by_ft = {
                 lua = { "stylua", lsp_format = "fallback" },
                 python = { "pyright", lspt_format = "fallback" },
-                go = { "gofumpt", lsp_format = "fallback" },
+                go = { "goimports-reviser", "gofumpt", lsp_format = "fallback" },
                 javascript = { "prettierd", "prettier", stop_after_first = true },
                 typescript = { "prettierd", "prettier", stop_after_first = true },
                 yaml = { "prettierd", "prettier", stop_after_first = true },

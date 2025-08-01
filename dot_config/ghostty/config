@@ -4,7 +4,7 @@
 # theme
 theme = "CobaltNext-Dark"
 font-family = "Monaspace Neon"
-font-size = 16
+font-size = 15
 font-thicken = true
 font-thicken-strength = 0
 background-opacity = 0.7
@@ -48,8 +48,8 @@ keybind = cmd+s>n=new_window
 
 # tabs 
 keybind = cmd+s>c=new_tab
-keybind = cmd+s>shift+l=next_tab
-keybind = cmd+s>shift+h=previous_tab
+keybind = cmd+s>]=next_tab
+keybind = cmd+s>[=previous_tab
 keybind = cmd+s>comma=move_tab:-1
 keybind = cmd+s>period=move_tab:1
 
@@ -77,6 +77,6 @@ keybind = cmd+s>z=toggle_split_zoom
 keybind = cmd+s>e=equalize_splits
 
 keybind = cmd+s>shift+k=resize_split:up,200
-keybind = cmd+s>shift+j=resize_split:down,200
-keybind = cmd+s>shift+h=resize_split:left,200
-keybind = cmd+s>shift+l=resize_split:right,200
+keybind = cmd+s>shift+j=resize_split:down,160
+keybind = cmd+s>shift+h=resize_split:left,160
+keybind = cmd+s>shift+l=resize_split:right,160

@@ -9,8 +9,7 @@ vim.keymap.set("n", "n", "nzzzv") -- next search result
 vim.keymap.set("n", "N", "Nzzzv") -- previous search
 
 -- black hole register
-vim.keymap.set("x", "<leader>p", [["_dP]]) -- paste (in visual mode)
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]) -- delete
+vim.keymap.set("v", "D", [["_d]]) -- delete
 
 -- yank into system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>Y", [["+Y]])
@@ -29,7 +28,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz")
 
 -- search text and replace all
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- make current file executable
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true })

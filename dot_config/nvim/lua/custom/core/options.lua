@@ -5,7 +5,7 @@ vim.opt.number = true -- set line numbers
 vim.opt.relativenumber = true -- use relative line numbers
 
 -- don't show the mode, since it's already in the status line
--- vim.opt.showmode = false
+vim.opt.showmode = false
 
 -- case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
@@ -39,7 +39,8 @@ vim.opt.timeoutlen = 300
 
 -- vim.opt.colorcolumn = "80" -- set color column at 80 characters
 -- vim.opt.cursorline = true -- highlight the current line
+
 vim.opt.background = "dark"
 
 vim.opt.list = true
-vim.opt.listchars = "trail:·,nbsp:␣,tab:» ," -- eol:↴
+vim.opt.listchars = "trail:·,nbsp:␣,tab:» ,eol: " --  ↴

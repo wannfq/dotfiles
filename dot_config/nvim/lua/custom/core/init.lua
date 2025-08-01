@@ -1,3 +1,3 @@
-require "lua.custom.core.globals"
-require "lua.custom.core.options"
-require "lua.custom.core.kemaps"
+require "custom.core.globals"
+require "custom.core.options"
+require "custom.core.kemaps"

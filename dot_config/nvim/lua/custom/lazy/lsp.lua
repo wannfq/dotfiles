@@ -10,7 +10,13 @@ return {
         "saghen/blink.cmp",
     },
     config = function()
-        require("fidget").setup {}
+        require("fidget").setup {
+            notification = {
+                window = {
+                    winblend = 0,
+                },
+            },
+        }
         require("mason").setup {}
         require("mason-lspconfig").setup {
             ensure_installed = {
@@ -22,8 +28,6 @@ return {
             },
         }
 
-        vim.lsp.inlay_hint.enable(true)
-
         vim.lsp.config("lua_ls", {
             settings = {
                 Lua = {
@@ -33,11 +37,9 @@ return {
                     },
                     diagnostics = {
                         globals = {
-                            "describe",
-                            "it",
+                            "globals",
                             "vim",
-                            "setup",
-                            "teardown",
+                            "Snacks",
                         },
                     },
                 },
@@ -123,12 +125,20 @@ return {
 
         vim.lsp.config("gopls", {
             settings = {
-                gopls = {
-                    analyses = {
-                        unusedparams = true,
-                        shadow = true,
-                    },
-                    staticcheck = true,
+                analyses = {
+                    unusedparams = true,
+                    shadow = true,
+                },
+                gofumpt = true,
+                staticcheck = true,
+                completeUnimported = true,
+                codelenses = {
+                    generate = true,
+                    gc_details = true,
+                    test = true,
+                    tidy = true,
+                    upgrade_dependency = true,
+                    vendor = true,
                 },
                 hints = {
                     assignVariableTypes = true,

@@ -8,6 +8,13 @@ return {
             preset = "simple", -- "modern", "classic", "minimal", "simple", "powerline"
             signs = {
                 diag = "",
+                arrow = "  ",
+            },
+            hi = {
+                background = "",
+            },
+            show_source = {
+                if_many = true,
             },
         }
 

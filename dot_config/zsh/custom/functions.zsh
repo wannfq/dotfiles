@@ -54,7 +54,7 @@ function awsauth() {
 
 # Loads owners search function
 function owner() {
-  aws s3 cp "s3://seek-owners/production-apse2/${1}.json" - | jq
+  aws s3 cp "s3://seek-owners/production-apse2/${1}.json" - | yq -p=json -o=yaml
 }
 
 # Loads aws account search function
