@@ -125,29 +125,31 @@ return {
 
         vim.lsp.config("gopls", {
             settings = {
-                analyses = {
-                    unusedparams = true,
-                    shadow = true,
-                },
-                gofumpt = true,
-                staticcheck = true,
-                completeUnimported = true,
-                codelenses = {
-                    generate = true,
-                    gc_details = true,
-                    test = true,
-                    tidy = true,
-                    upgrade_dependency = true,
-                    vendor = true,
-                },
-                hints = {
-                    assignVariableTypes = true,
-                    compositeLiteralFields = true,
-                    compositeLiteralTypes = true,
-                    constantValues = true,
-                    functionTypeParameters = true,
-                    parameterNames = true,
-                    rangeVariableTypes = true,
+                gopls = {
+                    analyses = {
+                        unusedparams = true,
+                        shadow = true,
+                    },
+                    gofumpt = true,
+                    staticcheck = true,
+                    completeUnimported = true,
+                    codelenses = {
+                        generate = true,
+                        gc_details = true,
+                        test = true,
+                        tidy = true,
+                        upgrade_dependency = true,
+                        vendor = true,
+                    },
+                    hints = {
+                        assignVariableTypes = true,
+                        compositeLiteralFields = true,
+                        compositeLiteralTypes = true,
+                        constantValues = true,
+                        functionTypeParameters = true,
+                        parameterNames = true,
+                        rangeVariableTypes = true,
+                    },
                 },
             },
         })

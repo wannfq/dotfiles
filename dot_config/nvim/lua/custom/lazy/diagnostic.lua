@@ -8,7 +8,7 @@ return {
             preset = "simple", -- "modern", "classic", "minimal", "simple", "powerline"
             signs = {
                 diag = "",
-                arrow = "  ",
+                arrow = " ",
             },
             hi = {
                 background = "",

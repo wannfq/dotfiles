@@ -100,14 +100,6 @@ return {
                         style = "bordered",
                     },
                 },
-                custom_highlights = function(colors)
-                    return {
-                        Pmenu = { bg = colors.none },
-                        BlinkCmpKind = { fg = colors.blue, italic = true },
-                        BlinkCmpLabel = { fg = colors.lavender },
-                        BlinkCmpLabelMatch = { fg = colors.sky, bold = true },
-                    }
-                end,
             }
 
             ColorMyNvim()

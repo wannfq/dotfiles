@@ -31,7 +31,7 @@ return {
     config = function(_, opts)
         require("blink.pairs").setup(opts)
         vim.api.nvim_set_hl(0, "BlinkPairsOrange", {
-            fg = "#CC8866",
+            fg = "#CC7700",
         })
     end,
 }
