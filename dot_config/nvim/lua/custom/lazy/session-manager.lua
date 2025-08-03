@@ -20,10 +20,10 @@ return {
             load_include_current = false, -- The currently loaded session appears in the load_session UI.
         }
 
-        vim.keymap.set("n", "<leader>sw", function()
+        vim.keymap.set("n", "<leader>Sw", function()
             vim.cmd.SessionManager "load_session"
         end, { desc = "Change Session" })
-        vim.keymap.set("n", "<leader>sW", function()
+        vim.keymap.set("n", "<leader>Sx", function()
             vim.cmd.SessionManager "delete_session"
         end, { desc = "Delete Session" })
     end,

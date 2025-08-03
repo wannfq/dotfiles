@@ -5,6 +5,7 @@ return {
     dependencies = {
         "kevinhwang91/promise-async",
         "neovim/nvim-lspconfig",
+        "nvim-treesitter/nvim-treesitter",
     },
     config = function()
         local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -49,7 +50,7 @@ return {
 
         require("ufo").setup {
             provider_selector = function()
-                return { "lsp", "indent" }
+                return { "indent" }
             end,
             fold_virt_text_handler = handler,
         }

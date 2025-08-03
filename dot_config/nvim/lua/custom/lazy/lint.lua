@@ -18,17 +18,18 @@ return {
         require("lint").linters_by_ft = {
             sh = { "shellcheck" },
             markdown = { "markdownlint", "vale" },
-            yaml = { "yamllint" },
-            json = { "jsonlint" },
             lua = { "luacheck" },
             javascript = { "eslint_d" },
             typescript = { "eslint_d" },
             go = { "golangcilint" },
+            -- yaml = { "yamllint" },
+            -- json = { "jsonlint" },
         }
 
         vim.api.nvim_create_autocmd({
             "BufReadPost",
-            "InsertLeave",
+            "BufWritePost",
+            -- "InsertLeave",
         }, {
             callback = function()
                 require("lint").try_lint()

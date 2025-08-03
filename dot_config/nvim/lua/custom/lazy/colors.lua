@@ -1,6 +1,6 @@
 local theme = "catppuccin"
 
-function ColorMyNvim(color)
+local function ColorMyNvim(color)
     color = color or theme
     vim.cmd.colorscheme(color)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -81,6 +81,10 @@ return {
                     conditionals = { "italic" },
                     keywords = { "italic" },
                     types = { "bold" },
+                },
+                float = {
+                    transparent = true,
+                    rounded = true,
                 },
                 integrations = {
                     cmp = true,
@@ -182,7 +186,8 @@ return {
                 },
                 inc_search = "background", -- underline | background
                 background_clear = {
-                    -- 'float_win', 'toggleterm', 'telescope', 'which-key', 'renamer', 'neo-tree', 'nvim-tree', 'bufferline'
+                    -- 'float_win', 'toggleterm', 'telescope', 'which-key', 'renamer',
+                    -- 'neo-tree', 'nvim-tree', 'bufferline'
                     "bufferline",
                     "float_win",
                     -- "telescope",
