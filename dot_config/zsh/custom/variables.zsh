@@ -1,6 +1,7 @@
 #
 # Variabes
 #
+
 export TMPDIR="/tmp/"
 export LANG=en_US.UTF-8
 export MANPATH="/usr/local/man:$MANPATH"
@@ -9,7 +10,9 @@ export EDITOR=$(which nvim)
 # Git extra diagnostics on error
 export GITSTATUS_LOG_LEVEL=DEBUG
 
-# Github username
+# Installs the default corepack shims after installing any node version
+# that ships with corepack
+export MISE_NODE_COREPACK='true'
 
 # Autosuggest optimization
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
