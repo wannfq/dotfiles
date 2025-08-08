@@ -47,19 +47,16 @@ fi
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 export ZSH_THEME="powerlevel10k/powerlevel10k"
-# Loads powerlevel10k theme. For ZSH_THEME="powerlevel10k/powerlevel10k"
-source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source $HOME/.p10k.zsh
-
 
 #
 # Custom files
 #
 
-# Load dependencies
-source $ZSH_CONFIG/custom/dependencies.zsh
+# Load sources
+source $ZSH_CONFIG/custom/sources.zsh
+
+# Load eval
+source $ZSH_CONFIG/custom/eval.zsh
 
 # Loads PATH file
 source $ZSH_CONFIG/custom/path.zsh
@@ -94,7 +91,6 @@ plugins=(
     fzf
     alias-finder
     kubectl
-    zsh-nvm
     command-not-found
     zsh-autosuggestions
     zsh-syntax-highlighting

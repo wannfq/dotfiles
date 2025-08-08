@@ -2,14 +2,16 @@ return {
     "akinsho/bufferline.nvim",
     version = "*",
     lazy = false,
+    after = "transparent",
     config = function()
         local bufferline = require "bufferline"
         bufferline.setup {
             options = {
                 style_preset = {
+                    bufferline.style_preset.minimal, -- no_italic, no_bold, minimal
                     bufferline.style_preset.no_italic,
-                    -- bufferline.style_preset.no_bold,
                 },
+                themable = true,
                 separator_style = { "", "" },
                 max_name_length = 24,
                 indicator = {

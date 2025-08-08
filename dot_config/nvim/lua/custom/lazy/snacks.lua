@@ -53,33 +53,30 @@ return {
             },
             indent = {
                 enabled = true,
-                scope = {
-                    hl = "SnacksIndent1",
-                },
+                scope = { hl = "SnacksIndent1" },
             },
             input = { enabled = true },
             picker = {
                 enabled = true,
                 sources = {
-                    files = {
-                        hidden = true,
-                    },
-                    buffers = {
-                        focus = "list",
-                    },
-                    undo = {
-                        focus = "list",
-                    },
+                    files = { hidden = true },
+                    buffers = { focus = "list" },
+                    undo = { focus = "list" },
                     explorer = {
-                        jump = {
-                            close = true,
-                        },
+                        hidden = true,
+                        jump = { close = true },
                         layout = {
                             preset = "default",
+                            preview = true,
                         },
-                        hidden = true,
                     },
+                    grep = { hidden = true },
                 },
+            },
+            notifier = {
+                enabled = true,
+                timeout = 5000,
+                style = "fancy", -- "compact"|"fancy"|"minimal"
             },
             quickfile = { enabled = true },
             scope = { enabled = true },
@@ -299,6 +296,13 @@ return {
                 desc = "Man Pages",
             },
             {
+                "<leader>sn",
+                function()
+                    Snacks.picker.notifications()
+                end,
+                desc = "Notification History",
+            },
+            {
                 "<leader>sp",
                 function()
                     Snacks.picker.lazy()
@@ -349,7 +353,7 @@ return {
                 desc = "Goto Declaration",
             },
             {
-                "gr",
+                "gR",
                 function()
                     Snacks.picker.lsp_references()
                 end,
@@ -421,6 +425,13 @@ return {
                 desc = "Delete Buffer",
             },
             {
+                "<leader>bD",
+                function()
+                    Snacks.bufdelete.other()
+                end,
+                desc = "Delete All Other Buffers",
+            },
+            {
                 "<leader>cR",
                 function()
                     Snacks.rename.rename_file()
@@ -448,6 +459,13 @@ return {
                     Snacks.terminal()
                 end,
                 desc = "Toggle Terminal",
+            },
+            {
+                "<leader>nd",
+                function()
+                    Snacks.notifier.hide()
+                end,
+                desc = "Dismiss All Notifications",
             },
             {
                 "<c-_>",

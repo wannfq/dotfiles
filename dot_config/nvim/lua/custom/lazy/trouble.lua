@@ -71,7 +71,6 @@ return {
             "[q",
             function()
                 if require("trouble").is_open() then
-                    ---@diagnostic disable-next-line: missing-parameter, missing-fields
                     require("trouble").prev { skip_groups = true, jump = true }
                 else
                     local ok, err = pcall(vim.cmd.cprev)
@@ -86,7 +85,6 @@ return {
             "]q",
             function()
                 if require("trouble").is_open() then
-                    ---@diagnostic disable-next-line: missing-parameter, missing-fields
                     require("trouble").next { skip_groups = true, jump = true }
                 else
                     local ok, err = pcall(vim.cmd.cnext)
@@ -111,5 +109,11 @@ return {
 
         -- Add object to list of acceptable objects
         table.insert(trouble_config.get("").modes.symbols.filter.any.kind, "Object")
+
+        vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+            callback = function()
+                vim.cmd [[Trouble qflist open]]
+            end,
+        })
     end,
 }

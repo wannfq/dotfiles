@@ -61,7 +61,7 @@ return {
                     func = nil,
                 },
                 replace = {
-                    prefix = "gr",
+                    all = "gr",
                     reindent_linewise = true,
                 },
                 sort = {
@@ -87,6 +87,40 @@ return {
         event = "VeryLazy",
         config = function()
             require("mini.basics").setup()
+        end,
+    },
+    {
+        "echasnovski/mini.pairs",
+        version = "*",
+        lazy = true,
+        event = "VeryLazy",
+        config = function()
+            require("mini.pairs").setup {
+                modes = { insert = true, command = false, terminal = false },
+            }
+        end,
+    },
+    {
+        "echasnovski/mini.surround",
+        version = "*",
+        lazy = true,
+        event = "VeryLazy",
+        config = function()
+            require("mini.surround").setup {
+                highlight_duration = 500,
+                mappings = {
+                    add = "sa", -- Add surrounding in Normal and Visual modes
+                    delete = "sd", -- Delete surrounding
+                    find = "sf", -- Find surrounding (to the right)
+                    find_left = "sF", -- Find surrounding (to the left)
+                    highlight = "sh", -- Highlight surrounding
+                    replace = "sr", -- Replace surrounding
+                    update_n_lines = "sn", -- Update `n_lines`
+
+                    suffix_last = "l", -- Suffix to search with "prev" method
+                    suffix_next = "n", -- Suffix to search with "next" method
+                },
+            }
         end,
     },
 }

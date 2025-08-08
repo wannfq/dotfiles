@@ -59,7 +59,7 @@ function owner() {
 
 # Loads aws account search function
 function awsaccount() {
-  aws s3 cp "s3://seek-aws-account-list/awsaccount.json" - | jq -r '.[] | select(.id=='\"${1}\"')'
+  aws s3 cp "s3://seek-aws-account-list/awsaccount.json" - | yq -p=json -o=yaml -r '.[] | select(.id=='\"${1}\"')'
 }
 
 # Tmux sessions list

@@ -6,6 +6,9 @@ return {
         },
         lazy = true,
         event = "BufReadPre",
+        config = function()
+            require("render-markdown").setup {}
+        end,
     },
 
     {

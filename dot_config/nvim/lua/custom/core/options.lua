@@ -38,11 +38,16 @@ vim.opt.updatetime = 200 -- faster completion
 vim.opt.timeoutlen = 300
 
 -- vim.opt.colorcolumn = "80" -- set color column at 80 characters
--- vim.opt.cursorline = true -- highlight the current line
+vim.opt.cursorline = true -- highlight the current line
 
 vim.opt.background = "dark"
 
 vim.opt.list = true
 vim.opt.listchars = "trail:·,nbsp:␣,tab:» ,eol: " --  ↴
+
+vim.opt.foldenable = true
+vim.opt.foldcolumn = "0"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
 
 vim.opt.winborder = "rounded"
