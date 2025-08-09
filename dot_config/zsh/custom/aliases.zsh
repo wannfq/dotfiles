@@ -30,13 +30,17 @@ alias t=tmux
 # fzf alias
 alias f=fzf
 
+# chezmoi to cm
+alias cm=chezmoi
+
 # yazi into e
 alias e=yazi
+alias y=yazi
 
 # kubectl to k
 alias k=kubectl
-alias kctx=kubectx
-alias kns=kubens
+alias kctx=kubectl ctx
+alias kns=kubectl ns
 
 # minikube alias
 alias mk=minikube

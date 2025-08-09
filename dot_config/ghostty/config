@@ -38,7 +38,6 @@ macos-option-as-alt = true
 # shaders
 # custom-shader = ~/.config/ghostty/shaders/cursor_smear.glsl
 
-
 #
 # keybindings
 #

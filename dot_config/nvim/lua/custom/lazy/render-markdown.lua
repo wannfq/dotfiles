@@ -7,7 +7,11 @@ return {
         lazy = true,
         event = "BufReadPre",
         config = function()
-            require("render-markdown").setup {}
+            require("render-markdown").setup {
+                code = {
+                    highlight_fallback = "Label",
+                },
+            }
         end,
     },
 
