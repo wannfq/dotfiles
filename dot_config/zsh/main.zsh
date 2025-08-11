@@ -74,8 +74,9 @@ source $ZSH_CONFIG/custom/fzf.zsh
 source $ZSH_CONFIG/custom/functions.zsh
 
 # Loads secrets
-source $ZSH_CONFIG/secrets.sh.local
-
+set -o allexport
+source $ZSH_CONFIG/.env.local
+set +o allexport
 
 #
 # Plugin

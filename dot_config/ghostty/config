@@ -7,7 +7,7 @@ font-family = "Monaspace Neon"
 font-size = 15
 font-thicken = true
 font-thicken-strength = 0
-background-opacity = 0.8
+background-opacity = 0.9
 background-blur = true
 unfocused-split-opacity = 1
 
@@ -21,7 +21,7 @@ window-padding-y = 4,8
 # behaviour
 cursor-style = block
 cursor-color = #FFCC66
-cursor-text = black
+cursor-text = #001122
 clipboard-read = allow
 clipboard-write = allow
 working-directory = home

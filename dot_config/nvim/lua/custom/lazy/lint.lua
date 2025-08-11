@@ -24,12 +24,13 @@ return {
             go = { "golangcilint" },
             -- yaml = { "yamllint" },
             -- json = { "jsonlint" },
+            astro = { "eslint_d" },
         }
 
         vim.api.nvim_create_autocmd({
             "BufReadPost",
             "BufWritePost",
-            -- "InsertLeave",
+            "InsertLeave",
         }, {
             callback = function()
                 require("lint").try_lint()

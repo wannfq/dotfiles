@@ -2,9 +2,13 @@
 # Functions
 #
 
-# Its annoying to type
+# Source zshrc. In most cases, use `re` instead
 function so() {
-    # source ~/.zshrc
+    source ~/.zshrc
+}
+
+# Reload zsh. Quicker than sourcing zshrc
+function re() {
     exec zsh
 }
 

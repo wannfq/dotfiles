@@ -24,6 +24,7 @@ return {
         "ofseed/copilot-status.nvim",
     },
     config = function()
+        local signsConfig = vim.diagnostic.config().signs
         require("lualine").setup {
             options = {
                 theme = "auto",
@@ -53,21 +54,33 @@ return {
                 },
                 lualine_x = {
                     { "fancy_macro" },
-                    { "fancy_diagnostics" },
+                    {
+                        "fancy_diagnostics",
+                        symbols = {
+                            error = signsConfig.text[vim.diagnostic.severity.ERROR],
+                            warn = signsConfig.text[vim.diagnostic.severity.WARN],
+                            hint = signsConfig.text[vim.diagnostic.severity.HINT],
+                            info = signsConfig.text[vim.diagnostic.severity.INFO],
+                        },
+                    },
                     { "fancy_searchcount" },
-                    { "fancy_location" },
+                    {
+                        "fancy_location",
+                        icon = {
+                            "󰍒 ",
+                            color = { fg = "#fc5603" },
+                            align = "right",
+                        },
+                    },
                 },
                 lualine_y = {
-                    {
-                        "fancy_filetype",
-                        ts_icon = "",
-                    },
+                    { "fancy_filetype" },
                     {
                         "copilot",
                         show_running = true,
                         symbols = {
                             status = {
-                                enabled = " ", -- 
+                                enabled = " ",
                                 disabled = " ",
                             },
                             spinners = require("copilot-status.spinners").dots,
@@ -78,7 +91,7 @@ return {
                     -- { "fancy_lsp_servers" },
                     {
                         get_active_lsp,
-                        icon = "󰒍",
+                        icon = "󰒍 ",
                     },
                 },
             },

@@ -1,6 +1,7 @@
 #
 # Aliases
 #
+
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
@@ -54,6 +55,7 @@ alias g=git
 
 # Lazygit alias
 alias lg=lazygit
+alias gg=lazygit
 
 # Lazydocker aliase
 alias ld=lazydocker

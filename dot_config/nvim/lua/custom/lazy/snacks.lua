@@ -71,6 +71,7 @@ return {
                         },
                     },
                     grep = { hidden = true },
+                    grep_word = { hidden = true },
                 },
             },
             notifier = {
@@ -300,7 +301,7 @@ return {
                 function()
                     Snacks.picker.notifications()
                 end,
-                desc = "Notification History",
+                desc = "Notifications",
             },
             {
                 "<leader>sp",
@@ -466,6 +467,13 @@ return {
                     Snacks.notifier.hide()
                 end,
                 desc = "Dismiss All Notifications",
+            },
+            {
+                "<leader>nh",
+                function()
+                    Snacks.notifier.show_history()
+                end,
+                desc = "Notification History",
             },
             {
                 "<c-_>",

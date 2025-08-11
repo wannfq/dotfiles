@@ -8,8 +8,10 @@ return {
         -- https://github.com/nvim-treesitter/nvim-treesitter
         configs.setup {
             ensure_installed = {
+                "astro",
                 "bash",
                 "c",
+                "css",
                 "diff",
                 "elixir",
                 "git_config",
@@ -37,6 +39,7 @@ return {
                 "typescript",
                 "vim",
                 "vimdoc",
+                "xml",
                 "yaml",
             },
             sync_install = false,

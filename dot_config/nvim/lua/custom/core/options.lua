@@ -11,6 +11,9 @@ vim.opt.showmode = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.incsearch = true
+vim.opt.hlsearch = false
+
 -- set tab size to 4 spaces
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -23,31 +26,24 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false -- disable highlight on search
-vim.opt.incsearch = true -- incremental search
-
+vim.opt.background = "dark"
 vim.opt.termguicolors = true
 
 vim.opt.wrap = false
-
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append "@-@"
+-- vim.opt.colorcolumn = "80"
+vim.opt.cursorline = true
+vim.opt.list = true
+vim.opt.listchars = "trail:·,nbsp:␣,tab:» ,eol: " --  ↴
+
+vim.opt.winborder = "rounded"
 
 vim.opt.updatetime = 200 -- faster completion
 vim.opt.timeoutlen = 300
-
--- vim.opt.colorcolumn = "80" -- set color column at 80 characters
-vim.opt.cursorline = true -- highlight the current line
-
-vim.opt.background = "dark"
-
-vim.opt.list = true
-vim.opt.listchars = "trail:·,nbsp:␣,tab:» ,eol: " --  ↴
 
 vim.opt.foldenable = true
 vim.opt.foldcolumn = "0"
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
-
-vim.opt.winborder = "rounded"

@@ -8,8 +8,17 @@ return {
         event = "BufReadPre",
         config = function()
             require("render-markdown").setup {
+                completions = {
+                    blink = {
+                        enabled = true,
+                    },
+                    lsp = {
+                        enabled = true,
+                    },
+                },
                 code = {
                     highlight_fallback = "Label",
+                    disable_background = {},
                 },
             }
         end,

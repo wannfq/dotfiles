@@ -1,4 +1,4 @@
-local theme = "catppuccin"
+local theme = "kanagawa"
 
 local function ApplyColor(color)
     color = color or theme
@@ -116,7 +116,7 @@ return {
         priority = 1000,
         config = function()
             require("kanagawa").setup {
-                theme = "lotus", -- Load 'wave', 'dragon' or 'lotus' theme
+                theme = "wave", -- Load 'wave', 'dragon' or 'lotus' theme
                 compile = false, -- enable compiling the colorscheme
                 undercurl = true, -- enable undercurls
                 commentStyle = { italic = true },
@@ -131,7 +131,7 @@ return {
                     local cs = colors.theme
                     local makeDiagnosticColor = function(color)
                         local c = require "kanagawa.lib.color"
-                        return { fg = color, bg = c(color):blend(cs.ui.bg, 0.95):to_hex() }
+                        return { fg = color, bg = c(color):blend(cs.ui.bg, 0.9):to_hex() }
                     end
                     return {
                         DiagnosticVirtualTextHint = makeDiagnosticColor(cs.diag.hint),
