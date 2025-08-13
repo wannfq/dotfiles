@@ -4,7 +4,7 @@
 
 # Source zshrc. In most cases, use `re` instead
 function so() {
-    source ~/.zshrc
+    source "$ZSH_CONFIG/.zshrc"
 }
 
 # Reload zsh. Quicker than sourcing zshrc

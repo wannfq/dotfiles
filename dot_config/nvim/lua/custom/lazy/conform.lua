@@ -29,11 +29,12 @@ return {
             end,
             formatters_by_ft = {
                 lua = { "stylua", lsp_format = "fallback" },
-                python = { "pyright", lspt_format = "fallback" },
+                python = { "black", lsp_format = "fallback" },
                 go = { "goimports-reviser", "gofumpt", lsp_format = "fallback" },
                 javascript = { "prettierd", "prettier", stop_after_first = true },
                 typescript = { "prettierd", "prettier", stop_after_first = true },
                 yaml = { "prettierd", "prettier", stop_after_first = true },
+                markdown = { "markdownlint", lsp_format = "fallback" },
                 astro = { "prettierd", "prettier", stop_after_first = true },
             },
         }

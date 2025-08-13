@@ -11,7 +11,7 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
 fi
 
 # Path to zsh config directory
-export ZSH_CONFIG="$HOME/.config/zsh"
+export ZSH_CONFIG="${ZDOTDIR:-$HOME/.config/zsh}"
 # Path to your Oh My Zsh installation.
 export ZSH="$ZSH_CONFIG/.oh-my-zsh"
 
