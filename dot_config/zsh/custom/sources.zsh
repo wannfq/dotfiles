@@ -2,13 +2,14 @@
 # Sources
 #
 
-# Loads powerlevel10k theme. For ZSH_THEME="powerlevel10k/powerlevel10k"
-source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source $HOME/.p10k.zsh
+# Load zsh-defer
+source ${ZIM_HOME}/modules/zsh-defer/zsh-defer.plugin.zsh
 
-# Loads fzf
-source =(fzf --zsh)
+# Init zoxide
+zsh-defer _evalcache zoxide init zsh --cmd cd
+
+# Activate mise
+zsh-defer _evalcache mise activate zsh
 
 # Load orbstack
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+zsh-defer source ${HOME}/.orbstack/shell/init.zsh

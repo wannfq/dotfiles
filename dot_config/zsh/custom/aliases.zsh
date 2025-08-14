@@ -16,8 +16,9 @@ alias c=clear
 # lsd into ls
 if [ -x "$(command -v lsd)" ]; then
     alias ls="lsd"
+    alias la="lsd -a"
     alias ll="lsd -lGgF" # list in grid
-    alias la="lsd -la" # list all
+    alias lla="lsd -la" # list all
     alias lt="lsd --tree --depth 2" # list tree
 fi
 

@@ -1,9 +1,6 @@
 #
 # general config
 
-# set TERM to xterm-256color
-term = xterm-256color
-
 # theme
 theme = "CobaltNext-Dark"
 cursor-color = #FFCC66
@@ -33,7 +30,7 @@ working-directory = home
 shell-integration = zsh
 shell-integration-features = no-cursor
 auto-update = check
-auto-update-channel = tip
+auto-update-channel = stable
 
 # macos
 macos-titlebar-style = transparent

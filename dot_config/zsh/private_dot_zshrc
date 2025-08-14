@@ -1,0 +1,17 @@
+# Startup profiler debug start. Must be at the very top of ~/.zshrc file.
+if [ -n "${ZSH_DEBUGRC+1}" ]; then
+    zmodload zsh/zprof
+fi
+
+# Path to zsh config directory
+export ZSH_CONFIG="${ZDOTDIR:-$HOME/.config/zsh}"
+
+#
+# Load custom zsh files
+#
+source "$ZSH_CONFIG/main.zsh"
+
+# Startup profiler debug end. Must be at the very bottom of ~/.zshrc
+if [ -n "${ZSH_DEBUGRC+1}" ]; then
+  zprof
+fi

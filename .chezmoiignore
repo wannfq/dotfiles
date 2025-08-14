@@ -5,6 +5,8 @@ README.md
 
 # zsh
 .config/zsh/.oh-my-zsh/**
+.config/zsh/.zim/**
+.config/zsh/.zsh_sessions/**
 .config/zsh/.zsh_history
 .config/zsh/.zcompdump*
 

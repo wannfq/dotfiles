@@ -17,6 +17,3 @@ export MISE_NODE_COREPACK='true'
 # Autosuggest optimization
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
-
-# Override cd command to z. Must set this before loading oh-my-zsh
-export ZOXIDE_CMD_OVERRIDE=cd
