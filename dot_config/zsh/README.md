@@ -4,8 +4,7 @@
 
 - brew
 - git
-- oh-my-zsh
-- powerline10k
+- zim
 - nerd fonts
 - fzf
 - lsd
