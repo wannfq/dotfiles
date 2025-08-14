@@ -147,6 +147,15 @@ return {
                 desc = "Find Config File",
             },
             {
+                "<leader>fd",
+                function()
+                    Snacks.picker.files {
+                        cwd = os.getenv "HOME" .. "/.local/share/chezmoi",
+                    }
+                end,
+                desc = "Find Dotfiles (Chezmoi)",
+            },
+            {
                 "<leader>ff",
                 function()
                     Snacks.picker.files()

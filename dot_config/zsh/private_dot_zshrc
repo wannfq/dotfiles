@@ -6,9 +6,7 @@ fi
 # Path to zsh config directory
 export ZSH_CONFIG="${ZDOTDIR:-$HOME/.config/zsh}"
 
-#
 # Load custom zsh files
-#
 source "$ZSH_CONFIG/main.zsh"
 
 # Startup profiler debug end. Must be at the very bottom of ~/.zshrc

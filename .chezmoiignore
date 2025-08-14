@@ -1,14 +1,23 @@
 **/.DS_Store
 **/*.log
 **/*.local
+
+# Source
 README.md
+
+#
+# Targets
+#
+# nvim
+.config/nvim/lazy-lock.json
 
 # zsh
 .config/zsh/.oh-my-zsh/**
 .config/zsh/.zim/**
 .config/zsh/.zsh_sessions/**
-.config/zsh/.zsh_history
 .config/zsh/.zcompdump*
+.config/zsh/.zsh_history
+.config/zsh/.p10k.zsh
 
 # yazi
 .config/yazi/flavors/**
