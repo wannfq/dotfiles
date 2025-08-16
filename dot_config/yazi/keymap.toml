@@ -7,4 +7,5 @@ prepend_keymap = [
   { on = "<A-p>", run = "plugin toggle-pane min-preview", desc = "Hide or show preview pane" },
   { on = "M", run = "plugin toggle-pane max-preview", desc = "Maximize or restore preview pane" },
   { on = ["g", "i"], run = "plugin lazygit", desc = "run lazygit" },
+  { on = "!", for = "unix", run = 'shell "$SHELL" --block', desc = "Open $SHELL here" },
 ]
