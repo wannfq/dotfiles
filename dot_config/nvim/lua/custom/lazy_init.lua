@@ -35,7 +35,7 @@ require("lazy").setup {
         colorscheme = {
             "tokyonight",
             "catppuccin",
-            "ayu",
+            "kanagawa",
             "habamax",
         },
     },

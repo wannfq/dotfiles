@@ -22,6 +22,8 @@ return {
                 "DiagnosticSignWarn",
                 "DiagnosticSignError",
                 "DiagnosticSignError",
+                "WinBarNC",
+                "StatusLineNC",
                 "Folded",
 
                 "LazyNormal",

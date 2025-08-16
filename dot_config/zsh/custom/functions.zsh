@@ -130,8 +130,8 @@ function work() {
 }
 
 # Cofigure on directory in tmux session. Require fzf installed
-function conf() {
-    tmux_session='conf'
-    base_path=~/.config/
+function dot() {
+    tmux_session='dot'
+    base_path=~/.local/share/chezmoi/dot_config/
     ss-project $tmux_session $base_path
 }

@@ -7,7 +7,7 @@ return {
         require("tiny-inline-diagnostic").setup {
             preset = "simple", -- "modern", "classic", "minimal", "simple", "powerline"
             signs = {
-                diag = "",
+                diag = " ",
                 arrow = " ",
             },
             hi = {

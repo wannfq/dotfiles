@@ -8,16 +8,19 @@
 - nerd fonts
 - fzf
 - lsd
+- ripgrep
+- fd
 - zoxide
 - mise
 
 ### Optional Dependencies
 
+- fastfetch
 - yazi
 - lazygit
 - delta
-- lazydocker
 - docker
+- lazydocker
 - orbstack
 - awscli
 - kubectl

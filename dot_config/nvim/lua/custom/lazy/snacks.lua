@@ -150,7 +150,7 @@ return {
                 "<leader>fd",
                 function()
                     Snacks.picker.files {
-                        cwd = os.getenv "HOME" .. "/.local/share/chezmoi",
+                        cwd = os.getenv "HOME" .. "/.local/share/chezmoi/dot_config",
                     }
                 end,
                 desc = "Find Dotfiles (Chezmoi)",
@@ -436,6 +436,13 @@ return {
             },
             {
                 "<leader>bD",
+                function()
+                    Snacks.bufdelete.all()
+                end,
+                desc = "Delete All Buffers",
+            },
+            {
+                "<leader>bo",
                 function()
                     Snacks.bufdelete.other()
                 end,
