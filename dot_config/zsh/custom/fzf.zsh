@@ -32,8 +32,15 @@ _fzf_comprun() {
     cd)           fzf --preview 'tree -C {} | head -200' --bind $bind   "$@" ;;
     export|unset) fzf --preview "eval 'echo \$'{}" --bind $bind         "$@" ;;
     ssh)          fzf --preview 'dig {}' --bind $bind                   "$@" ;;
+    whence)       fzf --preview 'whence -v {}' --bind $bind             "$@" ;;
     *)            fzf --preview 'bat -n --color=always {}' --bind $bind "$@" ;;
   esac
+}
+
+_fzf_complete_whence() {
+  _fzf_complete -- "$@" < <(
+    whence -wm '*' | sed 's/:[^:]*$//'
+  )
 }
 
 export FZF_CTRL_T_OPTS="

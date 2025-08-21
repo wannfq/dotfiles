@@ -46,5 +46,13 @@ return {
             highlight = { enable = true },
             indent = { enable = true },
         }
+        vim.filetype.add {
+            extension = {
+                mdx = "mdx",
+                zsh = "zsh",
+            },
+        }
+        vim.treesitter.language.register("markdown", "mdx")
+        vim.treesitter.language.register("bash", "zsh")
     end,
 }
