@@ -24,6 +24,8 @@
 - orbstack
 - awscli
 - kubectl
+- tmux
+- sesh
 
 ## Setup
 
