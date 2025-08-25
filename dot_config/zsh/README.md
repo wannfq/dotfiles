@@ -2,26 +2,30 @@
 
 ## Dependencies
 
-- brew
 - git
+
 - zim
-- nerd fonts
-- fzf
-- lsd
-- ripgrep
-- fd
-- zoxide
-- mise
+
+    ```sh
+    wget -nv -O - https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+    ```
 
 ### Optional Dependencies
 
+- nerd fonts
+- mise
+- eza
+- fzf
+- ripgrep
+- fd
+- zoxide
 - fastfetch
 - yazi
 - lazygit
 - delta
 - docker
 - lazydocker
-- orbstack
+- orbstack (MacOS)
 - awscli
 - kubectl
 - tmux

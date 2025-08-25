@@ -20,3 +20,6 @@ fi
 if [ -f ${HOME}/.orbstack/shell/init.zsh ]; then
     zsh-defer source ${HOME}/.orbstack/shell/init.zsh
 fi
+
+# Load alias finder
+zstyle ':zim:plugins:alias-finder' include-longer yes autoload yes

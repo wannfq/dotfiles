@@ -2,41 +2,28 @@
 # Aliases
 #
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
+# alias finder
+alias af=alias-finder
 
-# c into clear
-alias c=clear
-
-# lsd into ls
-if [ -x "$(command -v lsd)" ]; then
-    alias ls="lsd"
-    alias la="lsd -a"
-    alias ll="lsd -lGgF" # list in grid
-    alias lla="lsd -la" # list all
-    alias lt="lsd --tree --depth 2" # list tree
+# eza into ls
+if [ -x "$(command -v eza)" ]; then
+    alias ls="eza --icons --group-directories-first"
+    alias la="eza -a --icons --group-directories-first"
+    alias ll="eza --icons --long --git --group-directories-first" # long in grid
+    alias lla="eza -a --icons --long --git --group-directories-first" # long all in grid
+    alias lt="eza --tree --icons --level=2" # list tree
+    alias lta="eza -a --tree --icons --level=2" # list tree all
+    alias lx="eza -a --icons --long --group-directories-first --git --extended"
 fi
 
 # neovim into vim
 alias vim=nvim
 alias v=nvim
 
-# tmux into t
-alias t=tmux
-
-# fzf alias
-alias f=fzf
-
 # chezmoi to cm
 alias cm=chezmoi
 
-# yazi into e
-alias e=yazi
+# yazi into y
 alias y=yazi
 
 # kubectl to k
@@ -49,14 +36,12 @@ alias mk=minikube
 alias mkk=minikube kubectl --
 
 # Opentofu to tf
-alias tf=tofu
-
-# git alias
-alias g=git
+if [ -x "$(command -v tofu)" ]; then
+    alias tf=tofu
+fi
 
 # Lazygit alias
 alias lg=lazygit
-alias gg=lazygit
 
 # Lazydocker aliase
 alias ld=lazydocker

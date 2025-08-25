@@ -6,8 +6,16 @@ dotfiles of mine. Managed with [chezmoi](https://www.chezmoi.io/) 🦆.
 
 1. Install [chezmoi](https://www.chezmoi.io/installation/)
 
+    with brew
+
     ```sh
     brew install chezmoi
+    ```
+
+    or with [mise](https://mise.jdx.dev/)
+
+    ```sh
+    mise use -g chezmoi
     ```
 
 2. Initialize chezmoi with this GitHub repository

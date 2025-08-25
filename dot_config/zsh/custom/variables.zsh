@@ -14,6 +14,9 @@ export GITSTATUS_LOG_LEVEL=DEBUG
 # that ships with corepack
 export MISE_NODE_COREPACK='true'
 
+# Set eza config dir
+export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
+
 # Autosuggest optimization
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
