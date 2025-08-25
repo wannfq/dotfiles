@@ -18,7 +18,6 @@ fi
 
 # neovim into vim
 alias vim=nvim
-alias v=nvim
 
 # chezmoi to cm
 alias cm=chezmoi
