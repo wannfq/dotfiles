@@ -14,6 +14,9 @@ export GITSTATUS_LOG_LEVEL=DEBUG
 # that ships with corepack
 export MISE_NODE_COREPACK='true'
 
+# Enable color to man pages
+GROFF_NO_SGR=1
+
 # Set eza config dir
 export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 
