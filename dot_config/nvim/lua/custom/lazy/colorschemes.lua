@@ -1,4 +1,4 @@
-local theme = "kanagawa"
+local theme = "catppuccin"
 
 local function ApplyTheme(colorScheme)
     colorScheme = colorScheme or theme
@@ -102,6 +102,10 @@ return {
         config = function()
             require("kanagawa").setup {
                 theme = "wave", -- Load 'wave', 'dragon' or 'lotus' theme
+                background = {
+                    dark = "wave",
+                    light = "lotus",
+                },
                 compile = true, -- enable compiling the colorscheme
                 undercurl = true, -- enable undercurls
                 commentStyle = { italic = true },

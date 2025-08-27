@@ -47,3 +47,13 @@ alias ld=lazydocker
 
 # Startup profiler
 alias prof="time ZSH_DEBUGRC=1 zsh -i -c exit"
+
+# pacman search
+alias pacmans="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+# pacman remove
+alias pacmanr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
+
+# yay search
+alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
+# yay remove
+alias yayr="yay -Qq | fzf --multi --preview 'yay -Qi {1}' | xargs -ro yay -Rns"

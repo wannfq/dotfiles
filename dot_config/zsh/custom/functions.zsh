@@ -125,13 +125,13 @@ function ss-project() {
 # Work on directory in tmux session. Require fzf installed
 function work() {
     tmux_session='work'
-    base_path=~/Code/
+    base_path=~/projects/
     ss-project $tmux_session $base_path
 }
 
-# Cofigure on directory in tmux session. Require fzf installed
-function dot() {
-    tmux_session='dot'
+# Configure on directory in tmux session. Require fzf installed
+function dotc() {
+    tmux_session='dotc'
     base_path=~/.local/share/chezmoi/dot_config/
     ss-project $tmux_session $base_path
 }
