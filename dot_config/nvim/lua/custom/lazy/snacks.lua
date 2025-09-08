@@ -553,6 +553,7 @@ return {
             })
 
             vim.g.lazyvim_picker = "snacks"
+            vim.g.picker_engine = "snacks"
         end,
     },
 

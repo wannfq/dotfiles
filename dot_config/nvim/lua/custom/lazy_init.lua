@@ -30,7 +30,10 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup {
     spec = "custom.lazy",
-    checker = { enabled = true },
+    checker = { -- update checker
+        enabled = true,
+        notify = false, -- notify on update
+    },
     install = {
         colorscheme = {
             "tokyonight",
@@ -38,5 +41,9 @@ require("lazy").setup {
             "kanagawa",
             "habamax",
         },
+    },
+    ui = {
+        backdrop = 80,
+        border = "rounded",
     },
 }
