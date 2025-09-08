@@ -71,6 +71,15 @@ function ss() {
    $ZSH_CONFIG/excutables/session-list.sh "$@"
 }
 
+# tldr
+tl() {
+  if [ $@ ]; then
+    $(which tldr) $@
+  else
+    $(which tldr) --list-all | fzf --preview "$(which tldr) {} --color always" | xargs -r -I {} tldr {}
+  fi
+}
+
 # Go to tmux session, create if doesnt exists
 function ss-go() {
     default_tmux_session='default'
