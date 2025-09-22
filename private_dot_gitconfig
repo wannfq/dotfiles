@@ -1,0 +1,37 @@
+[user]
+	email = wannfq@users.noreply.github.com
+	name = Wan Afiq
+	signingkey = ""
+[commit]
+	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[push]
+	autoSetupRemote = true
+[core]
+	fscache = false
+	autocrlf = false
+	pager = delta --diff-so-fancy
+[merge]
+	conflictStyle = zdiff3
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+	hyperlinks = true
+	hunk-header-style = omit
+	hunk-header-decoration-style = none
+	features = line-numbers
+	; features = side-by-side
+[delta "line-numbers"]
+	line-numbers = true
+	line-numbers-left-format = "{nm:>4}│"
+	line-numbers-right-format = "{np:>4}│"
+[delta "side-by-side"]
+	side-by-side = true
+	wrap-righ-symbol = "󱞣"
+	wrap-left-symbol = "󰌑"
