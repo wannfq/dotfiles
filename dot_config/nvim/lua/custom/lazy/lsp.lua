@@ -17,6 +17,9 @@ return {
                 "ts_ls",
                 "pyright",
                 "gopls",
+                "bashls",
+                "tombi",
+                "yamlls",
             },
         }
 

@@ -64,14 +64,9 @@ return {
                     },
                 },
                 codeium = {
-                    name = "Codeium",
+                    name = "Windsurf", -- previously "codeium"
                     module = "codeium.blink",
                     async = true,
-                    opts = {
-                        kind_name = "Codeium",
-                        kind_icon = " ",
-                        debounce = 500,
-                    },
                 },
             },
         },
