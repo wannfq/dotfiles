@@ -12,12 +12,10 @@
 
     ```sh
     wget -nv -O - https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-
     ```
 
-    > [!WARNING]
-    > Once the zim installation is done,
-    > I highly recommend you to delete the generated codes in `.zimrc` and `.zshrc` files.
+    *Note: Once the zim installation is done,
+    I highly recommend you to delete the **generated** codes in `.zimrc` and `.zshrc` files.*
 
 ### Optional Dependencies
 
