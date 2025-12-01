@@ -4,11 +4,20 @@
 
 - git
 
-- zim
+- zim (a fast zsh config framework)
+
+    This dotfiles is preconfigured to automatically install zim framework if not found.
+
+    For manual installation, run:
 
     ```sh
     wget -nv -O - https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+
     ```
+
+    > [!WARNING]
+    > Once the zim installation is done,
+    > I highly recommend you to delete the generated codes in `.zimrc` and `.zshrc` files.
 
 ### Optional Dependencies
 
@@ -32,6 +41,8 @@
 - sesh
 
 ## Setup
+
+Do this if you want to configure the `.zshrc` in the `~/.config/zsh` directorya.
 
 Add these to `~/.zshenv` file. Create it if doesn't exists.
 

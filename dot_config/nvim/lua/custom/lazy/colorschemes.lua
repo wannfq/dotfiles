@@ -1,4 +1,4 @@
-local theme = "catppuccin"
+local theme = "catppuccin" -- tokyonight, catppuccin, kanagawa, onedark, ayu
 
 local function ApplyTheme(colorScheme)
     colorScheme = colorScheme or theme
