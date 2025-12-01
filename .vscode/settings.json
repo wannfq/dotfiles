@@ -1,9 +1,0 @@
-{
-  "go.goroot": "/Users/wanafiq/.local/share/mise/installs/go/1.24.6",
-  "debug.javascript.defaultRuntimeExecutable": {
-    "pwa-node": "/Users/wanafiq/.local/share/mise/shims/node"
-  },
-  "go.alternateTools": {
-    "go": "/Users/wanafiq/.local/share/mise/shims/go"
-  }
-}
