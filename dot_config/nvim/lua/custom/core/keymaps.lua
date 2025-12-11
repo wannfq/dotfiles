@@ -1,6 +1,6 @@
 -- vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
-vim.keymap.set("n", "<leader>a", "gg<S-v>G", { desc = "Select all" })
+vim.keymap.set("n", "<leader>A", "gg<S-v>G", { desc = "Select all" })
 
 -- keep cursor centered on jumping
 -- vim.keymap.set("n", "<C-d>", "<C-d>zz") -- scroll down
