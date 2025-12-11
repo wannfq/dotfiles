@@ -37,6 +37,7 @@
 - kubectl
 - tmux
 - sesh
+- opencode
 
 ## Setup
 
