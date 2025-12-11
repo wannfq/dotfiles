@@ -1,14 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "agent": {
-    "build": {
-      "mode": "primary",
-      "model": "github-copilot/gpt-5"
-    },
-    "plan": {
-      "mode": "primary",
-      "model": "github-copilot/gpt-5"
-    }
+  "model": "github-copilot/gpt-5",
+  "tools": {
+    "skills*": false
   },
   "mcp": {
     "sequential-thinking": {
@@ -36,5 +30,6 @@
         "Authorization": "Token {env:PAGERDUTY_TOKEN}"
       }
     }
-  }
+  },
+  "plugin": ["opencode-skills", "@tarquinen/opencode-dcp@latest"]
 }
