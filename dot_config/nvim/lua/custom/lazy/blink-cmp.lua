@@ -6,7 +6,7 @@ return {
     dependencies = {
         "rafamadriz/friendly-snippets",
         "fang2hou/blink-copilot",
-        "Exafunction/codeium.nvim",
+        -- "Exafunction/codeium.nvim",
     },
     opts = {
         keymap = {
@@ -50,7 +50,14 @@ return {
         -- Default list of enabled providers defined so that you can extend it
         -- elsewhere in your config, without redefining it, due to `opts_extend`
         sources = {
-            default = { "lsp", "path", "snippets", "buffer", "copilot", "codeium" },
+            default = {
+                "lsp",
+                "path",
+                "snippets",
+                "buffer",
+                "copilot",
+                -- "codeium",
+            },
             providers = {
                 copilot = {
                     name = "copilot",
@@ -63,11 +70,11 @@ return {
                         debounce = 500,
                     },
                 },
-                codeium = {
-                    name = "Windsurf", -- previously "codeium"
-                    module = "codeium.blink",
-                    async = true,
-                },
+                -- codeium = {
+                --     name = "Windsurf", -- previously "codeium"
+                --     module = "codeium.blink",
+                --     async = true,
+                -- },
             },
         },
     },
