@@ -1,0 +1,40 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "model": "github-copilot/gpt-5"
+    },
+    "plan": {
+      "mode": "primary",
+      "model": "github-copilot/gpt-5"
+    }
+  },
+  "mcp": {
+    "sequential-thinking": {
+      "enabled": true,
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "github": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:GITHUB_TOKEN}"
+      }
+    },
+    "pagerduty": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.pagerduty.com/mcp",
+      "headers": {
+        "Authorization": "Token {env:PAGERDUTY_TOKEN}"
+      }
+    }
+  }
+}
