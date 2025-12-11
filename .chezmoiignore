@@ -25,7 +25,3 @@ README.md
 
 # tmux
 .config/tmux/plugins/**
-
-# opencode
-.config/opencode/node_modules/**
-.config/opencode/.gitignore
