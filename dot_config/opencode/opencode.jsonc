@@ -19,7 +19,16 @@
       "type": "remote",
       "url": "https://api.githubcopilot.com/mcp",
       "headers": {
-        "Authorization": "Bearer ${env:GITHUB_TOKEN}"
+        "Authorization": "Bearer {env:GITHUB_TOKEN}"
+      }
+    },
+    "datadog": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.datadoghq.com/api/unstable/mcp-server/mcp",
+      "headers": {
+        "DD_API_KEY": "{env:DD_API_KEY}",
+        "DD_APPLICATION_KEY": "{env:DD_APP_KEY}"
       }
     },
     "pagerduty": {
