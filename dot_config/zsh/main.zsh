@@ -2,7 +2,7 @@
 # Custom files
 #
 # This is the entryponit of the zsh config file.
-# Be sure to source this file from `~/.zshrc`.
+# Be sure to source this file from `.zshrc`.
 #
 # This file should only contain base variables, function, aliases, prompt
 

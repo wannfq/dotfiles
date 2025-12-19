@@ -3,6 +3,11 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
     zmodload zsh/zprof
 fi
 
+# Loads .zshrc if exists
+if [ -f ${HOME}/.zshrc ]; then
+  source ${HOME}/.zshrc
+fi
+
 # Path to zsh config directory
 export ZSH_CONFIG="${ZDOTDIR:-$HOME/.config/zsh}"
 
