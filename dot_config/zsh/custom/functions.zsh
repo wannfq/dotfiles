@@ -51,15 +51,9 @@ function pls() {
 }
 
 # Loads SEEK's aws authentincation tool
-# function awsauth() {
-#     /opt/homebrew/opt/awsauth/bin/auth.sh "$@";
-#     [[ -r "$HOME/.aws/sessiontoken" ]] && . "$HOME/.aws/sessiontoken";
-# }
-function awsauth {
-    ~/projects/aws-auth-bash/auth.sh "$@";
-    script_result="$?"
+function awsauth() {
+    /opt/homebrew/opt/awsauth/bin/auth.sh "$@";
     [[ -r "$HOME/.aws/sessiontoken" ]] && . "$HOME/.aws/sessiontoken";
-    return "$script_result"
 }
 
 # Loads owners search function

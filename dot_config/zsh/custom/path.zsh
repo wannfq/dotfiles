@@ -2,11 +2,15 @@
 # PATH
 #
 
-# Add krew to PATH
+# homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+
+# krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# Add cursor cli to PATH
+# cursor cli
 export PATH="$HOME/.local/bin:$PATH"
 
-# Add opencode to PATH
-export PATH=/home/wanxfq/.opencode/bin:$PATH
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"

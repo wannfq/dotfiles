@@ -12,14 +12,14 @@ source ${ZSH_CONFIG}/custom/p10k-init.zsh
 # Init zim
 source ${ZSH_CONFIG}/custom/zim-init.zsh
 
+# Load sources
+source ${ZSH_CONFIG}/custom/sources.zsh
+
 # Loads PATH file
 source ${ZSH_CONFIG}/custom/path.zsh
 
 # Loads variables
 source ${ZSH_CONFIG}/custom/variables.zsh
-
-# Load sources
-source ${ZSH_CONFIG}/custom/sources.zsh
 
 # Loads aliases
 source ${ZSH_CONFIG}/custom/aliases.zsh
