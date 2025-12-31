@@ -1,7 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "tools": {
-    "skills*": false
+  "permission": {
+    "skill": {
+      "*": "ask",
+      "doc-coauthoring": "allow"
+    }
   },
   "mcp": {
     "sequential-thinking": {
@@ -37,7 +40,19 @@
       "headers": {
         "Authorization": "Token {env:PAGERDUTY_TOKEN}"
       }
+    },
+    "shadcn": {
+      "enabled": true,
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "shadcn@latest",
+        "mcp"
+      ]
     }
   },
-  "plugin": ["opencode-skills", "@tarquinen/opencode-dcp@latest"]
+  "plugin": [
+    "@tarquinen/opencode-dcp@latest"
+  ]
 }

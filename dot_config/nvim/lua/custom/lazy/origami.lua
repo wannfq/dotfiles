@@ -3,7 +3,9 @@ return {
     lazy = true,
     event = "VeryLazy",
     opts = {
-        useLspFoldsWithTreesitterFallback = true,
+        useLspFoldsWithTreesitterFallback = {
+            enabled = true,
+        },
         pauseFoldsOnSearch = true,
         foldtext = {
             enabled = true,
