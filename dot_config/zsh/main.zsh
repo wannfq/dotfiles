@@ -30,6 +30,9 @@ source ${ZSH_CONFIG}/custom/fzf.zsh
 # Loads functions
 source ${ZSH_CONFIG}/custom/functions.zsh
 
+# Loads general zsh configs
+source ${ZSH_CONFIG}/custom/configs.zsh
+
 # Loads secret variables
 if [ -f ${ZSH_CONFIG}/.env.local ]; then
     set -o allexport

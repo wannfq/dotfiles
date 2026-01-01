@@ -19,6 +19,9 @@ fi
 # neovim into vim
 alias vim=nvim
 
+# bat to cat
+alias cat=bat
+
 # chezmoi to cm
 alias cm=chezmoi
 
