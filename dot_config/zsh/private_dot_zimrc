@@ -49,3 +49,4 @@ zmodule romkatv/zsh-defer -d
 zmodule mroth/evalcache
 zmodule romkatv/powerlevel10k
 zmodule shanwker1223/zim-alias-finder
+zmodule Aloxaf/fzf-tab
