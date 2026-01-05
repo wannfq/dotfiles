@@ -3,16 +3,17 @@
 #
 
 # theme
-theme = "CobaltNext-Dark"
-cursor-color = #FFCC66
-cursor-text = #001122
+theme = "Catppuccin Mocha"
+# cursor-color = #FFCC66
+# cursor-text = #001122
 background-opacity = 0.85
 background-blur = true
 unfocused-split-opacity = 1
 
 # font
-font-family = "Monaspace Neon"
-font-size = 15
+font-family = "MonaspiceNe NF"
+font-family-italic = "MonaspiceAr NF"
+font-size = 14
 font-thicken = true
 font-thicken-strength = 0
 
