@@ -1,6 +1,6 @@
 # dotfiles
 
-dotfiles of mine. Managed with [chezmoi](https://www.chezmoi.io/) 🏠.
+Dotfiles of mine. Managed with [chezmoi](https://www.chezmoi.io/) 🏠.
 
 ## Setup
 
@@ -10,12 +10,6 @@ dotfiles of mine. Managed with [chezmoi](https://www.chezmoi.io/) 🏠.
 
     ```sh
     brew install chezmoi
-    ```
-
-    or with [mise](https://mise.jdx.dev/)
-
-    ```sh
-    mise use -g chezmoi
     ```
 
 2. Initialize chezmoi with this GitHub repository
@@ -29,3 +23,12 @@ dotfiles of mine. Managed with [chezmoi](https://www.chezmoi.io/) 🏠.
     ```sh
     chezmoi apply
     ```
+
+## Configured tools
+
+- zsh
+- kitty
+- neovim
+- fastfetch
+- yazi
+- k9s
