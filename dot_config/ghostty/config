@@ -79,7 +79,7 @@ keybind = cmd+s>l=goto_split:right
 keybind = cmd+s>z=toggle_split_zoom
 keybind = cmd+s>e=equalize_splits
 
-keybind = cmd+s>cmd+k=resize_split:up,200
-keybind = cmd+s>cmd+j=resize_split:down,160
-keybind = cmd+s>cmd+h=resize_split:left,160
-keybind = cmd+s>cmd+l=resize_split:right,160
+keybind = cmd+s>cmd+k=resize_split:up,120
+keybind = cmd+s>cmd+j=resize_split:down,120
+keybind = cmd+s>cmd+h=resize_split:left,120
+keybind = cmd+s>cmd+l=resize_split:right,120

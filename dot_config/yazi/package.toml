@@ -11,7 +11,7 @@ hash = "3996fc74044bc44144b323686f887e1"
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
 rev = "1ab21d4"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+hash = "aeb9aa2b11f9dcaed2538b5e8870f693"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:no-status"
@@ -46,19 +46,19 @@ hash = "b4040931f0d2f9670ddb4923e55cd881"
 [[flavor.deps]]
 use = "yazi-rs/flavors:dracula"
 rev = "d3fd3a5"
-hash = "7b9ff01a0070cc9176e0c683329aeb26"
+hash = "1fe7f745525f309239dd476844aaa487"
 
 [[flavor.deps]]
 use = "gosxrgxx/flexoki-dark"
 rev = "28e1977"
-hash = "9dbbb64ea20f9f1271c31951dea55c7b"
+hash = "bc4620db89cf55bd91906c239f8fa1a8"
 
 [[flavor.deps]]
 use = "kmlupreti/ayu-dark"
 rev = "5f600aa"
-hash = "a05f94b9a20b64d814c7631074d65c4a"
+hash = "f15f5406a009076c9aafbb053e404834"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "5f56364"
-hash = "c0bf69ad2c44005892d586e9693993c6"
+hash = "ea25e1f0f25b0521ef78fd4e9698ff52"
