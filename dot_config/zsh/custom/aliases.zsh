@@ -22,9 +22,6 @@ alias vim=nvim
 # bat to cat
 alias cat=bat
 
-# chezmoi to cm
-alias cm=chezmoi
-
 # yazi into y
 alias y=yazi
 
