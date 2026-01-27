@@ -29,16 +29,29 @@ return {
         lazy = true,
         event = "VeryLazy",
         config = function()
-            require("mini.move").setup {
-                left = "<M-h>",
-                right = "<M-l>",
-                down = "<M-j>",
-                up = "<M-k>",
-                line_left = "<M-h>",
-                line_right = "<M-l>",
-                line_down = "<M-j>",
-                line_up = "<M-k>",
+            local move = require("mini.move")
+            move.setup {
+                mappings = {
+                    left = "<M-h>",
+                    right = "<M-l>",
+                    down = "<M-j>",
+                    up = "<M-k>",
+                    line_left = "<M-h>",
+                    line_right = "<M-l>",
+                    line_down = "<M-j>",
+                    line_up = "<M-k>",
+                },
             }
+
+            -- Add arrow key support
+            vim.keymap.set("v", "<M-Left>", function() move.move_selection("left") end, { desc = "Move selection left" })
+            vim.keymap.set("v", "<M-Right>", function() move.move_selection("right") end, { desc = "Move selection right" })
+            vim.keymap.set("v", "<M-Down>", function() move.move_selection("down") end, { desc = "Move selection down" })
+            vim.keymap.set("v", "<M-Up>", function() move.move_selection("up") end, { desc = "Move selection up" })
+            vim.keymap.set("n", "<M-Left>", function() move.move_line("left") end, { desc = "Move line left" })
+            vim.keymap.set("n", "<M-Right>", function() move.move_line("right") end, { desc = "Move line right" })
+            vim.keymap.set("n", "<M-Down>", function() move.move_line("down") end, { desc = "Move line down" })
+            vim.keymap.set("n", "<M-Up>", function() move.move_line("up") end, { desc = "Move line up" })
         end,
     },
     {
