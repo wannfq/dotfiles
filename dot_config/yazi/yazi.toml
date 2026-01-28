@@ -8,6 +8,17 @@ show_hidden = true
 edit = [
   { run = 'nvim "$@"', desc = "Neovim", block = true, for = "unix" },
   { run = 'code "$@"', desc = "VS Code", orphan = true, for = "unix" },
+  { run = 'cursor "$@"', desc = "Cursor", orphan = true, for = "unix" },
+]
+
+[plugin]
+prepend_previewers = [
+  # { name = "*.csv", run = "rich-preview" },  # for csv files
+  # { name = "*.md", run = "rich-preview" },  # for markdown (.md) files
+  { name = "*.rst", run = "rich-preview" },  # for restructured text (.rst) files
+  { name = "*.ipynb", run = "rich-preview" },  # for jupyter notebooks (.ipynb)
+  # { name = "*.json", run = "rich-preview" },  # for json (.json) files
+  # { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
 ]
 
 [[plugin.prepend_fetchers]]
@@ -19,13 +30,3 @@ run = "git"
 id = "git"
 name = "*/"
 run = "git"
-
-[plugin]
-prepend_previewers = [
-  # { name = "*.csv", run = "rich-preview" },  # for csv files
-  # { name = "*.md", run = "rich-preview" },  # for markdown (.md) files
-  { name = "*.rst", run = "rich-preview" },  # for restructured text (.rst) files
-  { name = "*.ipynb", run = "rich-preview" },  # for jupyter notebooks (.ipynb)
-  # { name = "*.json", run = "rich-preview" },  # for json (.json) files
-  # { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
-]
