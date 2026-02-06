@@ -79,6 +79,12 @@ return {
                             "Snacks",
                         },
                     },
+                    workspace = {
+                        library = {
+                            vim.env.VIMRUNTIME,
+                            vim.fn.stdpath "data" .. "/lazy",
+                        },
+                    },
                 },
             },
         })
