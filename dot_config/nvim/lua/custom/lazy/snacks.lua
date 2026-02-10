@@ -74,6 +74,7 @@ return {
                     grep_word = { hidden = true },
                 },
             },
+            gh = {},
             notifier = {
                 enabled = true,
                 timeout = 5000,
@@ -469,6 +470,34 @@ return {
                     Snacks.lazygit()
                 end,
                 desc = "Lazygit",
+            },
+            {
+                "<leader>gi",
+                function()
+                    Snacks.picker.gh_issue()
+                end,
+                desc = "GitHub Issues (open)",
+            },
+            {
+                "<leader>gI",
+                function()
+                    Snacks.picker.gh_issue { state = "all" }
+                end,
+                desc = "GitHub Issues (all)",
+            },
+            {
+                "<leader>gp",
+                function()
+                    Snacks.picker.gh_pr()
+                end,
+                desc = "GitHub Pull Requests (open)",
+            },
+            {
+                "<leader>gP",
+                function()
+                    Snacks.picker.gh_pr { state = "all" }
+                end,
+                desc = "GitHub Pull Requests (all)",
             },
             {
                 "<c-/>",
