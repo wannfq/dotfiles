@@ -3,62 +3,62 @@ return {
     build = ":TSUpdate",
     lazy = true,
     event = "VeryLazy",
-    config = function()
-        local configs = require "nvim-treesitter.configs"
-        -- https://github.com/nvim-treesitter/nvim-treesitter
-        configs.setup {
-            ensure_installed = {
-                "astro",
-                "bash",
-                "c",
-                "css",
-                "diff",
-                "elixir",
-                "git_config",
-                "git_rebase",
-                "gitcommit",
-                "gitignore",
-                "go",
-                "gomod",
-                "gosum",
-                "gowork",
-                "hcl",
-                "html",
-                "javascript",
-                "json",
-                "jsonc",
-                "lua",
-                "markdown",
-                "markdown_inline",
-                "powershell",
-                "python",
-                "regex",
-                "rust",
-                "terraform",
-                "toml",
-                "typescript",
-                "vim",
-                "vimdoc",
-                "xml",
-                "yaml",
-                "norg",
-                "scss",
-                "svelte",
-                "tsx",
-                "typst",
-                "vue",
-            },
-            sync_install = false,
-            highlight = { enable = true },
-            indent = { enable = true },
+    branch = "main",
+    init = function()
+        local ensureInstalled = {
+            "astro",
+            "bash",
+            "c",
+            "css",
+            "diff",
+            "elixir",
+            "git_config",
+            "git_rebase",
+            "gitcommit",
+            "gitignore",
+            "go",
+            "gomod",
+            "gosum",
+            "gowork",
+            "hcl",
+            "html",
+            "javascript",
+            "json",
+            "lua",
+            "markdown",
+            "markdown_inline",
+            "powershell",
+            "python",
+            "regex",
+            "rust",
+            "terraform",
+            "toml",
+            "typescript",
+            "vim",
+            "vimdoc",
+            "xml",
+            "yaml",
+            "scss",
+            "svelte",
+            "tsx",
+            "typst",
+            "vue",
         }
-        vim.filetype.add {
-            extension = {
-                mdx = "mdx",
-                zsh = "zsh",
-            },
-        }
-        vim.treesitter.language.register("markdown", "mdx")
-        vim.treesitter.language.register("bash", "zsh")
+        local alreadyInstalled = require("nvim-treesitter.config").get_installed()
+        local parsersToInstall = vim.iter(ensureInstalled)
+            :filter(function(parser)
+                return not vim.tbl_contains(alreadyInstalled, parser)
+            end)
+            :totable()
+        require("nvim-treesitter").install(parsersToInstall)
+
+        vim.api.nvim_create_autocmd("FileType", {
+            callback = function()
+                -- Enable treesitter highlighting and disable regex syntax
+                pcall(vim.treesitter.start)
+                -- Enable treesitter-based indentation
+                vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end,
+        })
     end,
 }
