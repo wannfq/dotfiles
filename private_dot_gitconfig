@@ -1,7 +1,7 @@
 [user]
 	email = wannfq@users.noreply.github.com
 	name = Wan Afiq
-	signingkey = ""
+	signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGRjyrPEJ82V2T47Cy6Lu+Ce1Mzl/zamzF4FQKwSFPiZ"
 [commit]
 	gpgsign = true
 [gpg]
