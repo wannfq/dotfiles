@@ -54,6 +54,11 @@ rev = "28e1977"
 hash = "bc4620db89cf55bd91906c239f8fa1a8"
 
 [[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "d3fd3a5"
+hash = "1fe7f745525f309239dd476844aaa487"
+
+[[flavor.deps]]
 use = "kmlupreti/ayu-dark"
 rev = "5f600aa"
 hash = "f15f5406a009076c9aafbb053e404834"

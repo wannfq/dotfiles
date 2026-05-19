@@ -6,6 +6,9 @@
       "doc-coauthoring": "allow"
     }
   },
+  "server": {
+    "port": 4096
+  },
   "mcp": {
     "sequential-thinking": {
       "enabled": true,
