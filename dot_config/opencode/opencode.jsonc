@@ -3,7 +3,6 @@
   "permission": {
     "skill": {
       "*": "allow"
-      "doc-coauthoring": "allow"
     }
   },
   "server": {
