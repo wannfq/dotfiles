@@ -231,11 +231,6 @@ install  gh            gh            github-cli
 
 info "Installing Nerd Fonts..."
 
-{{ if eq .chezmoi.os "darwin" -}}
-# Tap homebrew fonts
-brew tap homebrew/cask-fonts 2>/dev/null || true
-{{- end }}
-
 #        command  macOS pkg                       Arch pkg                type
 install  ""       font-meslo-lg-nerd-font         ttf-meslo-nerd          cask
 install  ""       font-monaspice-nerd-font        otf-monaspace-nerd      cask
