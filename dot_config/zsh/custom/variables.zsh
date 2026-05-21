@@ -26,3 +26,6 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # Force powerline to use nerd fonts
 export POWERLINE_NERD_FONTS=1
+
+# SearXNG
+export SEARXNG_URL="http://localhost:8888"

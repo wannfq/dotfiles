@@ -20,3 +20,6 @@ fi
 if [ -f ${HOME}/.orbstack/shell/init.zsh ]; then
     zsh-defer source ${HOME}/.orbstack/shell/init.zsh
 fi
+
+# OpenPeon
+[ -f /home/wanxfq/.claude/hooks/peon-ping/completions.bash ] && source /home/wanxfq/.claude/hooks/peon-ping/completions.bash

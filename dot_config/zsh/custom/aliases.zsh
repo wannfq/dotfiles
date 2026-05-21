@@ -60,3 +60,6 @@ alias pacmanr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro s
 alias yays="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 # yay remove
 alias yayr="yay -Qq | fzf --multi --preview 'yay -Qi {1}' | xargs -ro yay -Rns"
+
+# peon-ping quick controls
+alias peon="bash /home/wanxfq/.claude/hooks/peon-ping/peon.sh"
