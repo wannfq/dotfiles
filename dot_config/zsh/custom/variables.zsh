@@ -23,3 +23,6 @@ export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 # Autosuggest optimization
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+# Force powerline to use nerd fonts
+POWERLINE_NERD_FONTS=1
