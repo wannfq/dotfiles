@@ -18,3 +18,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
+
+# omp
+export PATH="$HOME/.cache/.bun/bin:$PATH"
