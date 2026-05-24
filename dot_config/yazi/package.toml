@@ -44,16 +44,6 @@ rev = "843c3fa"
 hash = "b4040931f0d2f9670ddb4923e55cd881"
 
 [[flavor.deps]]
-use = "yazi-rs/flavors:dracula"
-rev = "d3fd3a5"
-hash = "1fe7f745525f309239dd476844aaa487"
-
-[[flavor.deps]]
-use = "gosxrgxx/flexoki-dark"
-rev = "28e1977"
-hash = "bc4620db89cf55bd91906c239f8fa1a8"
-
-[[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "d3fd3a5"
 hash = "1fe7f745525f309239dd476844aaa487"

@@ -304,7 +304,7 @@ fi
 
 if command_exists ya; then
     info "Installing yazi plugins..."
-    ya pkg install
+    ya pkg install --discard
     success "Yazi plugins installed"
 else
     warn "ya command not found, skipping yazi plugin installation"
