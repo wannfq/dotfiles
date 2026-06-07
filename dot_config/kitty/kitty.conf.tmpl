@@ -1,0 +1,89 @@
+include current-theme.conf
+
+text_composition_strategy legacy
+
+cursor_trail 3
+
+bell_on_tab " "
+tab_title_max_length 32
+initial_window_width 150c
+initial_window_height 50c
+window_margin_width 0
+
+background_opacity 0.8
+dynamic_background_opacity yes
+background_blur 16
+
+allow_remote_control yes
+
+# =============================================================================
+# Platform
+# =============================================================================
+{{- $fontsize := 14 }}
+{{- $font     := "MonaspiceNe Nerd Font" }}
+{{- $pad      := 4 }}
+{{- $mod      := "alt" }}
+{{- $vsplit   := "alt+d" }}
+{{- $hsplit   := "alt+shift+d" }}
+{{- if eq .chezmoi.os "darwin" }}
+{{-   $font    = "MesloLGMDZ Nerd Font" }}
+{{-   $pad     = 2 }}
+{{-   $mod     = "cmd" }}
+{{-   $vsplit  = "cmd+d,cmd+shift+\\" }}
+{{-   $hsplit  = "cmd+shift+d,cmd+shift+-" }}
+listen_on unix:/tmp/kitty
+macos_option_as_alt yes
+macos_show_window_title_in none
+{{- else }}
+listen_on unix:@mykitty
+{{- end }}
+
+font_size {{ $fontsize }}
+window_padding_width {{ $pad }}
+enabled_layouts splits,grid,horizontal,vertical,stack
+
+# =============================================================================
+# Keybinds
+# =============================================================================
+
+# Splits
+map {{ $vsplit }} launch --location=vsplit --cwd=current
+map {{ $hsplit }} launch --location=hsplit --cwd=current
+
+# Navigate windows
+map {{ $mod }}+shift+h neighboring_window left
+map {{ $mod }}+shift+j neighboring_window down
+map {{ $mod }}+shift+k neighboring_window up
+map {{ $mod }}+shift+l neighboring_window right
+
+# Layouts
+map {{ $mod }}+shift+/ next_layout
+map {{ $mod }}+z toggle_layout stack
+
+# Window focus
+map {{ $mod }}+p nth_window -1
+map {{ $mod }}+] next_window
+map {{ $mod }}+[ previous_window
+
+# Tabs
+map {{ $mod }}+t new_tab
+map {{ $mod }}+w close_tab
+map {{ $mod }}+shift+p previous_tab
+map {{ $mod }}+shift+n next_tab
+
+map {{ $mod }}+1 goto_tab 1
+map {{ $mod }}+2 goto_tab 2
+map {{ $mod }}+3 goto_tab 3
+map {{ $mod }}+4 goto_tab 4
+map {{ $mod }}+5 goto_tab 5
+map {{ $mod }}+6 goto_tab 6
+map {{ $mod }}+7 goto_tab 7
+map {{ $mod }}+8 goto_tab 8
+map {{ $mod }}+9 goto_tab 9
+
+# BEGIN_KITTY_FONTS
+font_family      family="{{ $font }}"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
