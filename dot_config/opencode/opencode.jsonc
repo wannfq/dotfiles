@@ -28,6 +28,25 @@
     }
   },
   "plugin": [
-    "@tarquinen/opencode-dcp"
-  ]
+    "@tarquinen/opencode-dcp",
+    "oh-my-opencode-slim"
+  ],
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    },
+    "build": {
+      "color": "#FAB387"
+    },
+    "plan": {
+      "color": "#CBA6F7"
+    },
+    "orchestrator": {
+      "color": "#74C7EC"
+    }
+  },
+  "lsp": true
 }
