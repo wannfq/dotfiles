@@ -29,8 +29,8 @@ allow_remote_control yes
 {{-   $font    = "MesloLGMDZ Nerd Font" }}
 {{-   $pad     = 2 }}
 {{-   $mod     = "cmd" }}
-{{-   $vsplit  = "cmd+d,cmd+shift+\\" }}
-{{-   $hsplit  = "cmd+shift+d,cmd+shift+-" }}
+{{-   $vsplit  = "cmd+d" }}
+{{-   $hsplit  = "cmd+shift+d" }}
 listen_on unix:/tmp/kitty
 macos_option_as_alt yes
 macos_show_window_title_in none
@@ -49,6 +49,10 @@ enabled_layouts splits,grid,horizontal,vertical,stack
 # Splits
 map {{ $vsplit }} launch --location=vsplit --cwd=current
 map {{ $hsplit }} launch --location=hsplit --cwd=current
+{{- if eq .chezmoi.os "darwin" }}
+map cmd+shift+\ launch --location=vsplit --cwd=current
+map cmd+shift+- launch --location=hsplit --cwd=current
+{{- end }}
 
 # Navigate windows
 map {{ $mod }}+shift+h neighboring_window left
