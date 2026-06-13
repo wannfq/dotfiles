@@ -54,6 +54,9 @@ map cmd+shift+\ launch --location=vsplit --cwd=current
 map cmd+shift+- launch --location=hsplit --cwd=current
 {{- end }}
 
+# Resize
+map {{ $mod }}+r start_resizing_window
+
 # Navigate windows
 map {{ $mod }}+shift+h neighboring_window left
 map {{ $mod }}+shift+j neighboring_window down
