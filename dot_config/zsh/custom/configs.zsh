@@ -10,15 +10,20 @@ zstyle ':fzf-tab:complete:bat:*' fzf-preview 'bat --color=always $realpath'
 
 # History
 HISTFILE=$ZSH_CONFIG/.zhistory
-SAVEHIST=1000
-HISTSIZE=999
-setopt share_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_verify
+SAVEHIST=10000
+HISTSIZE=10000
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_VERIFY
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # Autocorrection
-setopt correct
+setopt CORRECT
 
+# Shell
+setopt AUTOCD

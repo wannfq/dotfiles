@@ -26,5 +26,8 @@ if [ -f ${HOME}/.claude/hooks/peon-ping/completions.zsh ]; then
     zsh-defer source ${HOME}/.claude/hooks/peon-ping/completions.zsh
 fi
 
+# OpenCode completions
+zsh-defer _evalcache opencode completion zsh
+
 # OMP completions
 zsh-defer _evalcache omp completions zsh
