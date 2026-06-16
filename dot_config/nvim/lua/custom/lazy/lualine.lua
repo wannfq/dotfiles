@@ -74,18 +74,19 @@ return {
                     },
                 },
                 lualine_y = {
+                    { require("opencode").statusline },
+                    -- {
+                    --     "copilot",
+                    --     show_running = true,
+                    --     symbols = {
+                    --         status = {
+                    --             enabled = " ",
+                    --             disabled = " ",
+                    --         },
+                    --         spinners = require("copilot-status.spinners").dots,
+                    --     },
+                    -- },
                     { "fancy_filetype" },
-                    {
-                        "copilot",
-                        show_running = true,
-                        symbols = {
-                            status = {
-                                enabled = " ",
-                                disabled = " ",
-                            },
-                            spinners = require("copilot-status.spinners").dots,
-                        },
-                    },
                 },
                 lualine_z = {
                     -- { "fancy_lsp_servers" },
