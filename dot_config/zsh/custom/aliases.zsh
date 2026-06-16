@@ -45,8 +45,8 @@ alias lg=lazygit
 # Lazydocker alias
 alias ld=lazydocker
 
-# Opencode alias
-alias oc=opencode
+# OpenCode alias
+alias oc="opencode --port"
 
 # Startup profiler
 alias prof="time ZSH_DEBUGRC=1 zsh -i -c exit"
