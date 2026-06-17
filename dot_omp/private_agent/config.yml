@@ -1,0 +1,60 @@
+statusLine:
+  separator: powerline-thin
+  preset: default
+  sessionAccent: false
+display:
+  shimmer: classic
+  showTokenUsage: true
+modelRoles:
+  default: opencode-go/deepseek-v4-pro:auto
+  smol: opencode-go/deepseek-v4-flash:auto
+  plan: opencode-go/minimax-m3:xhigh
+  slow: opencode-go/deepseek-v4-pro:xhigh
+  task: opencode-go/deepseek-v4-pro:auto
+  commit: opencode-go/deepseek-v4-flash:low
+  vision: opencode-go/mimo-v2.5:high
+  designer: opencode-go/minimax-m3:high
+  advisor: opencode-go/deepseek-v4-flash:low
+symbolPreset: nerd
+defaultThinkingLevel: auto
+memory:
+  backend: local
+task:
+  maxConcurrency: 16
+  agentModelOverrides: {}
+  disabledAgents: []
+  showResolvedModelBadge: true
+  eager: preferred
+serviceTier: none
+hideThinkingBlock: false
+providers:
+  webSearch: exa
+setupVersion: 1
+theme:
+  dark: dark
+tui:
+  textSizing: true
+  hyperlinks: auto
+interruptMode: immediate
+marketplace:
+  autoUpdate: auto
+repeatToolDescriptions: false
+personality: default
+retry:
+  modelFallback: true
+  maxRetries: 5
+inspect_image:
+  enabled: true
+github:
+  enabled: true
+vault:
+  enabled: false
+readLineNumbers: true
+secrets:
+  enabled: true
+browser:
+  headless: false
+advisor:
+  enabled: true
+  subagents: true
+
