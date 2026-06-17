@@ -1,7 +1,12 @@
 -- vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Open file explorer" })
 
 -- replace text (word under cursor in normal mode, selection in visual mode)
-vim.keymap.set("n", "<leader>rt", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word under cursor" })
+vim.keymap.set(
+    "n",
+    "<leader>rt",
+    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = "Replace word under cursor" }
+)
 vim.keymap.set("v", "<leader>rt", [["hy:%s/<C-r>h/<C-r>h/gI<Left><Left><Left>]], { desc = "Replace selected text" })
 
 vim.keymap.set("n", "<leader>A", "gg<S-v>G", { desc = "Select all" })
