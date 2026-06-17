@@ -9,7 +9,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
 ## Required Dependencies
 
-Only `curl` and `git` are required to bootstrap. The install script will handle the rest.
+Only `curl` and `git` are required to bootstrap. The install script handles everything else.
 
 **macOS**: Xcode Command Line Tools (for git)
 ```sh
@@ -29,23 +29,34 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply wannfq
 
 The install script will automatically:
 - Install the appropriate package manager (Homebrew on macOS, yay on Arch)
-- Install all tools and dependencies
-- Configure plugin managers (zimfw, TPM, yazi)
+- Install 30+ CLI tools, dev tools, fonts
+- Configure plugin managers (zimfw, TPM, yazi plugins)
 
 ## Repository Structure
 
 | File/Directory | Purpose |
-|----------------|---------|
-| `.zshenv` | Sets XDG base directories and `ZDOTDIR` to keep zsh config in `~/.config/zsh` |
-| `dot_config/` | Application configurations managed by chezmoi |
-| `run_once_before_install.sh.tmpl` | One-time bootstrap script for installing packages |
-| `private_dot_gitconfig` | Git configuration (includes delta pager and 1Password SSH signing) |
+|---|---|
+| `dot_zshenv` | Sets XDG base directories and `ZDOTDIR` |
+| `dot_config/` | Application configs managed by chezmoi |
+| `dot_omp/` | OMP harness agent config |
+| `run_once_before_install.sh.tmpl` | One-time bootstrap: OS detection, package install, plugin setup |
+| `private_dot_gitconfig` | Git config (delta pager, 1Password SSH signing) |
+| `AGENTS.md` | AI assistant guide: architecture, conventions, patterns |
 
 ## Installed Tools
 
-### CLI Tools
+### Core Utilities
+
 | Tool | Description |
-|------|-------------|
+|---|---|
+| git | Version control |
+| curl | HTTP client |
+| man-db | Manual pages (Arch only — macOS ships its own) |
+
+### CLI Tools
+
+| Tool | Description |
+|---|---|
 | neovim | Modern Vim-based editor |
 | tmux | Terminal multiplexer |
 | zsh | Z shell |
@@ -68,14 +79,16 @@ The install script will automatically:
 | tealdeer | Fast tldr client |
 
 ### Terminal Emulators
+
 | Tool | Description |
-|------|-------------|
-| ghostty | GPU-accelerated terminal |
-| kitty | GPU-based terminal emulator |
+|---|---|
+| kitty | GPU-based terminal (primary — OS-templated config) |
+| ghostty | GPU-accelerated terminal (secondary — flat config) |
 
 ### Dev Tools
+
 | Tool | Description |
-|------|-------------|
+|---|---|
 | k9s | Kubernetes TUI |
 | kubectl | Kubernetes CLI |
 | krew | kubectl plugin manager |
@@ -85,53 +98,103 @@ The install script will automatically:
 | opencode | AI coding agent for terminal |
 
 ### Fonts (Nerd Fonts)
+
 - Meslo Nerd Font
 - Monaspace Nerd Font
 - JetBrains Mono Nerd Font
 
 ### Plugin Managers
+
 | Tool | Description |
-|------|-------------|
+|---|---|
 | zimfw | Zsh plugin manager |
 | TPM | Tmux Plugin Manager |
+| lazy.nvim | Neovim plugin manager (auto-bootstraps) |
+| ya (yazi) | Yazi plugin/package manager |
 
 ## Configured Applications
 
-Configuration files are provided for:
+### zsh
 
-- **zsh** - Modular shell configuration using zimfw with:
-  - [powerlevel10k](https://github.com/romkatv/powerlevel10k) prompt
-  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
-  - [fzf-tab](https://github.com/Aloxaf/fzf-tab) for fuzzy tab completion
-  - [zsh-defer](https://github.com/romkatv/zsh-defer) and [evalcache](https://github.com/mroth/evalcache) for fast startup
-  - [zoxide](https://github.com/ajeetdsouza/zoxide) integration (`cd` replacement)
-  - [mise](https://mise.jdx.dev/) activation
-  - Custom aliases, functions, and PATH configuration
-- **neovim** - Full IDE setup with LSP, completion, and plugins via lazy.nvim
-- **tmux** - Terminal multiplexer with catppuccin theme and TPM
-- **kitty** - Terminal emulator configuration
-- **ghostty** - Terminal emulator with custom shaders
-- **yazi** - File manager with plugins (smart-enter, full-border, git, lazygit, rich-preview) and themes
-- **k9s** - Kubernetes TUI with plugins and skins
-- **fastfetch** - System info display
-- **opencode** - AI coding agent configuration
-- **git** - Delta pager, 1Password SSH signing, and custom delta themes
+Modular shell configuration using zimfw. Load order: p10k → zim → sources → path → variables → aliases → fzf → functions → configs → .env.local.
+
+Key plugins:
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k) prompt (instant prompt enabled)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
+- [fzf-tab](https://github.com/Aloxaf/fzf-tab) fuzzy tab completion
+- [zsh-defer](https://github.com/romkatv/zsh-defer) + [evalcache](https://github.com/mroth/evalcache) for fast startup
+- [zoxide](https://github.com/ajeetdsouza/zoxide) `cd` replacement
+- [mise](https://mise.jdx.dev/) runtime activation
+
+Custom functions: `pls` (auto-detect JS package manager), `ss`/`ss-go` (tmux session switcher), `work`/`dotc` (project launchers with fzf), `greo` (git rebase helper).
+
+### neovim
+
+Full IDE via lazy.nvim. One plugin spec file per plugin under `lua/custom/lazy/`. Includes: LSP (mason + nvim-lspconfig), blink-cmp, treesitter, conform (formatting), gitsigns, snacks, trouble, dap, copilot/codeium, and more. StyLua formatting: 4-space indent, no call parentheses.
+
+Leader key: `<Space>`. Keymaps: `<Space>sk` search keymaps, `<Space>sh` search help.
+
+### tmux
+
+- Prefix: `C-Space` (not `C-b`)
+- Vim-style pane navigation: `h/j/k/l` (select), `H/J/K/L` (resize)
+- Splits: `\` (horizontal), `-` (vertical)
+- Theme: Catppuccin Mocha via TPM
+- Session picker: fzf-based via shared script with zsh
+- Windows/panes indexed from 1, auto-renumbered
+
+### kitty
+
+OS-templated config: `cmd` modifier on macOS, `alt` on Linux. Nerd Font primary, bl1nk theme. Splits, tabs, and window navigation all use OS-adaptive keybinds.
+
+### ghostty
+
+Flat config with Catppuccin Mocha theme. MonaspiceNe Nerd Font. Custom GLSL cursor shaders (blaze enabled, smear disabled). All keybinds use `cmd+s>` prefix namespace.
+
+### yazi
+
+File manager with 9 plugins (smart-enter, full-border, git, no-status, toggle-pane, chmod, lazygit, simple-status, rich-preview) and 3 flavors (catppuccin-mocha, ayu-dark, tokyo-night). All pinned by commit hash in `package.toml`.
+
+### k9s
+
+Kubernetes TUI with `transparent` skin, custom resource aliases, and 40+ community plugin YAMLs covering ArgoCD, Flux, Helm, crossplane, cert-manager, and more. Two custom kubectl executable plugins: `kubectl-purge` (helm delete) and `kubectl-jq` (log filter).
+
+### fastfetch
+
+Custom JSONC layout with Nerd Font icons. Sections: Hardware (green), Software (yellow), DE/WM (blue), Uptime/Age (magenta). Includes custom OS-age calculation via command module.
+
+### opencode
+
+AI coding agent with multi-layer config:
+- `opencode.jsonc` — MCP servers (sequential-thinking), permissions, plugins, agent colors
+- `oh-my-opencode-slim.json` — Model presets (cheap, openai, opencode-go) mapping agent roles
+- `tui.json` — TUI keybinds: leader `ctrl+space`
+
+### git
+
+- Delta pager for diffs
+- 1Password SSH signing
+- Custom delta themes
 
 ## Optional Tools
 
-The following tools are referenced in aliases and functions but are **not** auto-installed by the bootstrap script (install manually if needed):
+The following are referenced in aliases and functions but are **not** auto-installed by the bootstrap script. Install manually if needed:
 
 | Tool | Description |
-|------|-------------|
-| go | Go programming language (used in PATH config) |
-| minikube | Local Kubernetes cluster (`mk` alias) |
+|---|---|
+| go | Go programming language (PATH config, GOPATH) |
+| minikube | Local Kubernetes cluster (`mk`, `mkk` aliases) |
 | tofu / opentofu | OpenTofu IaC tool (`tf` alias) |
 | bun / pnpm / yarn / deno | JS package managers (used by `pls` function) |
+| orbstack | macOS container runtime (shell integration) |
+| sesh | Tmux session manager (alternative to built-in session picker) |
+| awscli | AWS CLI (used by `awsauth`, `owner`, `awsaccount` functions) |
 
 ## Post-Installation Notes
 
-- **Neovim**: Plugins auto-install on first launch via lazy.nvim
-- **Zsh**: Zim modules auto-install on first shell startup
-- **Tmux**: Plugins installed automatically by the setup script
-- **Yazi**: Plugins are managed via `package.toml` and installed with `ya pkg install`
-- Restart your terminal after installation for all changes to take effect
+- **Zsh**: Zim modules auto-install on first shell startup. Secrets in `~/.config/zsh/.env.local` are never committed — create manually.
+- **Neovim**: Plugins auto-install on first launch via lazy.nvim. Run `:Lazy check` to check for updates.
+- **Tmux**: Plugins install with `prefix + I` or automatically during bootstrap.
+- **Yazi**: Plugins and flavors are pinned by commit hash in `package.toml`. Run `ya pkg install` after updating hashes.
+- **OpenCode**: Requires environment variables for API tokens (see `opencode.jsonc` for expected vars).
+- Restart your terminal or `exec zsh` after installation for all changes to take effect.

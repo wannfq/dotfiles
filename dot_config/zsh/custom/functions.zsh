@@ -68,7 +68,7 @@ function awsaccount() {
 
 # Tmux sessions list
 function ss() {
-   $ZSH_CONFIG/excutables/session-list.sh "$@"
+   $ZSH_CONFIG/executables/session-list.sh "$@"
 }
 
 # tldr

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-~/.config/zsh/excutables/session-list.sh
+~/.config/zsh/executables/session-list.sh
