@@ -95,14 +95,8 @@
       },
       "oracle": {
         "model": "opencode-go/deepseek-v4-pro",
-        "variant": "max",
-        "skills": ["simplify"],
-        "mcps": []
-      },
-      "council": {
-        "model": "opencode-go/mimo-v2.5-pro",
         "variant": "high",
-        "skills": [],
+        "skills": ["simplify"],
         "mcps": []
       },
       "librarian": {
@@ -123,7 +117,7 @@
       },
       "fixer": {
         "model": "opencode-go/deepseek-v4-flash",
-        "variant": "max",
+        "variant": "xhigh",
         "skills": [],
         "mcps": []
       },
