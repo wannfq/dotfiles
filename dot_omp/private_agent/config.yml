@@ -6,11 +6,11 @@ display:
   shimmer: classic
   showTokenUsage: true
 modelRoles:
-  default: opencode-go/deepseek-v4-pro:auto
+  default: opencode-go/minimax-m3:auto
   smol: opencode-go/deepseek-v4-flash:auto
+  slow: opencode-go/deepseek-v4-pro:high
+  task: opencode-go/deepseek-v4-flash:xhigh
   plan: opencode-go/minimax-m3:xhigh
-  slow: opencode-go/deepseek-v4-pro:xhigh
-  task: opencode-go/deepseek-v4-pro:auto
   commit: opencode-go/deepseek-v4-flash:low
   vision: opencode-go/mimo-v2.5:high
   designer: opencode-go/minimax-m3:high
@@ -57,4 +57,3 @@ browser:
 advisor:
   enabled: true
   subagents: true
-

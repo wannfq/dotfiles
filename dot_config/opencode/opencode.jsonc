@@ -29,7 +29,8 @@
   },
   "plugin": [
     "@tarquinen/opencode-dcp",
-    "oh-my-opencode-slim"
+    "oh-my-opencode-slim",
+    "@slkiser/opencode-quota"
   ],
   "agent": {
     "explore": {

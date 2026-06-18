@@ -6,5 +6,5 @@
   "sidebar": {
     "visible": true
   },
-  "plugin": ["oh-my-opencode-slim"]
+  "plugin": ["oh-my-opencode-slim", "@slkiser/opencode-quota"]
 }
