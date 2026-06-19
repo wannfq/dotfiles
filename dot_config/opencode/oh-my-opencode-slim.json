@@ -1,7 +1,7 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
   "preset": "cheap",
-  "disabled_agents": ["councillor"],
+  "disabled_agents": ["councilor"],
   "presets": {
     "openai": {
       "orchestrator": {
@@ -94,9 +94,15 @@
         "mcps": ["*", "!context7"]
       },
       "oracle": {
-        "model": "opencode-go/deepseek-v4-pro",
-        "variant": "high",
+        "model": "neuralwatt/glm-5.2",
+        "variant": "max",
         "skills": ["simplify"],
+        "mcps": []
+      },
+      "council": {
+        "model": "opencode-go/deepseek-v4-pro",
+        "variant": "max",
+        "skills": [],
         "mcps": []
       },
       "librarian": {
@@ -117,7 +123,7 @@
       },
       "fixer": {
         "model": "opencode-go/deepseek-v4-flash",
-        "variant": "xhigh",
+        "variant": "max",
         "skills": [],
         "mcps": []
       },

@@ -41,12 +41,13 @@
     },
     "build": {
       "color": "#FAB387"
+      // "color": "#74C7EC"
     },
     "plan": {
       "color": "#CBA6F7"
     },
     "orchestrator": {
-      "color": "#74C7EC"
+      "color": "#A6E3A1"
     }
   },
   "lsp": true
