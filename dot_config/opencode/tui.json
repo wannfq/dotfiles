@@ -3,8 +3,9 @@
   "keybinds": {
     "leader": "ctrl+space"
   },
-  "sidebar": {
-    "visible": true
-  },
-  "plugin": ["oh-my-opencode-slim", "@slkiser/opencode-quota"]
+  "plugin": [
+    "@tarquinen/opencode-dcp",
+    "oh-my-opencode-slim",
+    "@slkiser/opencode-quota"
+  ]
 }
