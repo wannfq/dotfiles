@@ -48,6 +48,9 @@ alias ld=lazydocker
 # OpenCode alias
 alias oc="opencode --port"
 
+# cht.sh alias
+alias cht=cht.sh
+
 # Startup profiler
 alias prof="time ZSH_DEBUGRC=1 zsh -i -c exit"
 

@@ -199,7 +199,9 @@ install  fx          fx              fx
 install  curlie      curlie          curlie
 install  delta       git-delta       git-delta
 install  btop        btop            btop
-install  tldr        tealdeer        tealdeer
+install  duf         duf             duf
+install  tldr        tlrc            tlrc-bin
+install  rlwrap      rlwrap          rlwrap
 
 # =============================================================================
 # Terminal Emulators
@@ -235,6 +237,23 @@ info "Installing Nerd Fonts..."
 install  ""       font-meslo-lg-nerd-font         ttf-meslo-nerd          cask
 install  ""       font-monaspice-nerd-font        otf-monaspace-nerd      cask
 install  ""       font-jetbrains-mono-nerd-font   ttf-jetbrains-mono-nerd cask
+
+# =============================================================================
+# cht.sh (cheat.sh client)
+# Not packaged on Homebrew; AUR-only on Arch. Official curl install.
+# rlwrap is a required dependency for shell mode (installed above).
+# =============================================================================
+
+CHTSH_BIN="${HOME}/.local/bin/cht.sh"
+if ! command_exists cht.sh; then
+    info "Installing cht.sh..."
+    mkdir -p "$(dirname "$CHTSH_BIN")"
+    curl -fsSL https://cht.sh/:cht.sh > "$CHTSH_BIN"
+    chmod +x "$CHTSH_BIN"
+    success "cht.sh installed"
+else
+    info "cht.sh already installed"
+fi
 
 # =============================================================================
 # mise (Runtime Version Manager)

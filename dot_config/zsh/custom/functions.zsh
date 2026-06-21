@@ -71,12 +71,12 @@ function ss() {
    $ZSH_CONFIG/executables/session-list.sh "$@"
 }
 
-# tldr
-tl() {
-  if [ $@ ]; then
-    $(which tldr) $@
+# tldr (tlrc)
+function tl() {
+  if [ $# -gt 0 ]; then
+    tldr "$@"
   else
-    $(which tldr) --list-all | fzf --preview "$(which tldr) {} --color always" | xargs -r -I {} tldr {}
+    tldr --list-all | fzf --preview "tldr {} --color always" | xargs -r -I {} tldr {}
   fi
 }
 

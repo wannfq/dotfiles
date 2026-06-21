@@ -73,7 +73,7 @@ zsh-defer _evalcache opencode completion zsh
 | `dotc` | Fzf-select directory and open in tmux for config editing |
 | `greo` | Git rebase onto origin/main with stash preservation |
 | `fif` | Find-in-file using ripgrep + fzf preview |
-| `tl` | tldr with fallback to man |
+| `tl` | tldr, or fzf-pick from all pages if no arg |
 | `awsauth` | AWS authentication |
 | `owner` | SEEK owners lookup |
 | `awsaccount` | AWS account lookup |
@@ -100,6 +100,39 @@ zsh-defer _evalcache opencode completion zsh
 | tmux | `ss`/`ss-go`/`work`/`dotc` functions |
 | opencode | `oc` alias, completions (sources.zsh) |
 | kubectl | `k`/`kctx`/`kns` aliases |
+
+### CLI Tools (auto-installed by bootstrap)
+
+| Tool | Purpose |
+|---|---|
+| neovim | Editor (`vim` alias) |
+| tmux | Terminal multiplexer |
+| zsh | Shell |
+| yazi | File manager (`y` alias) |
+| fastfetch | System info display |
+| eza | `ls` replacement |
+| bat | `cat` replacement |
+| fzf | Fuzzy finder |
+| zoxide | Smarter `cd` |
+| lazygit | Git TUI |
+| lazydocker | Docker TUI |
+| ripgrep | Fast search (`rg`, `fif`) |
+| jq | JSON processor |
+| yq | YAML processor |
+| fd | Fast `find` |
+| fx | JSON viewer TUI |
+| curlie | HTTPie-like curl wrapper |
+| git-delta | Syntax-highlighted diff pager |
+| btop | System monitor |
+| duf | Disk usage viewer |
+| tlrc | tldr client (`tl` function) |
+| rlwrap | Readline wrapper (required by `cht.sh --shell`) |
+| cht.sh | Cheat sheets (`cht` alias) |
+| k9s | Kubernetes TUI |
+| kubectl | Kubernetes CLI |
+| krew | kubectl plugin manager |
+| docker | Container runtime |
+| gh | GitHub CLI |
 
 ### Optional (referenced but not auto-installed)
 
