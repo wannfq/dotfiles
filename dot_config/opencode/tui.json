@@ -6,6 +6,7 @@
   "plugin": [
     "@tarquinen/opencode-dcp",
     "oh-my-opencode-slim",
-    "@slkiser/opencode-quota"
+    "@slkiser/opencode-quota",
+    "oc-tps@latest"
   ]
 }
