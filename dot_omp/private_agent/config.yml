@@ -8,7 +8,7 @@ display:
 modelRoles:
   default: opencode-go/minimax-m3:auto
   smol: opencode-go/deepseek-v4-flash:auto
-  slow: opencode-go/deepseek-v4-pro:high
+  slow: opencode-go/deepseek-v4-pro:xhigh
   task: opencode-go/deepseek-v4-flash:xhigh
   plan: opencode-go/minimax-m3:xhigh
   commit: opencode-go/deepseek-v4-flash:low
