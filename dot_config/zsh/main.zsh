@@ -33,9 +33,14 @@ source ${ZSH_CONFIG}/custom/functions.zsh
 # Loads general zsh configs
 source ${ZSH_CONFIG}/custom/configs.zsh
 
-# Loads secret variables
+# Loads local secret variables
 if [ -f ${ZSH_CONFIG}/.env.local ]; then
     set -o allexport
     source ${ZSH_CONFIG}/.env.local
     set +o allexport
+fi
+
+# Loads local zsh file
+if [ -f ${ZSH_CONFIG}/local.zsh ]; then
+    source ${ZSH_CONFIG}/local.zsh
 fi

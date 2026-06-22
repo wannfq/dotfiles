@@ -50,27 +50,6 @@ function pls() {
     fi
 }
 
-# Loads SEEK's aws authentincation tool
-function awsauth() {
-    /opt/homebrew/opt/awsauth/bin/auth.sh "$@";
-    [[ -r "$HOME/.aws/sessiontoken" ]] && . "$HOME/.aws/sessiontoken";
-}
-
-# Loads owners search function
-function owner() {
-  aws s3 cp "s3://seek-owners/production-apse2/${1}.json" - | yq -p=json -o=yaml
-}
-
-# Loads aws account search function
-function awsaccount() {
-  aws s3 cp "s3://seek-aws-account-list/awsaccount.json" - | yq -p=json -o=yaml -r '.[] | select(.id=='\"${1}\"')'
-}
-
-# Tmux sessions list
-function ss() {
-   $ZSH_CONFIG/executables/session-list.sh "$@"
-}
-
 # tldr (tlrc)
 function tl() {
   if [ $# -gt 0 ]; then
@@ -80,8 +59,13 @@ function tl() {
   fi
 }
 
+# Tmux sessions list
+function ss() {
+   $ZSH_CONFIG/executables/session-list.sh "$@"
+}
+
 # Go to tmux session, create if doesnt exists
-function ss-go() {
+function ssgo() {
     default_tmux_session='default'
     tmux_session=${1:-$default_tmux_session}
     tmux_window=${2}
@@ -109,7 +93,7 @@ function ss-go() {
 }
 
 # Open project in tmux session
-function ss-project() {
+function sspro() {
     tmux_session=${1}
     # The base path of your projects
     default_base_path=$HOME/
@@ -125,9 +109,9 @@ function ss-project() {
         work_path=$base_path$project_path
         echo "Working on: $work_path"
 
-        ss-go $tmux_session $project_path $work_path
+        ssgo $tmux_session $project_path $work_path
     else
-        ss-go $tmux_session
+        ssgo $tmux_session
     fi
 }
 
@@ -135,12 +119,12 @@ function ss-project() {
 function work() {
     tmux_session='work'
     base_path=~/projects/
-    ss-project $tmux_session $base_path
+    sspro $tmux_session $base_path
 }
 
 # Configure on directory in tmux session. Require fzf installed
 function dotc() {
     tmux_session='dotc'
     base_path=~/.local/share/chezmoi/dot_config/
-    ss-project $tmux_session $base_path
+    sspro $tmux_session $base_path
 }

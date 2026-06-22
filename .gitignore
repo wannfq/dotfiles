@@ -1,2 +1,5 @@
 .DS_Store
 .vscode
+
+# Machine-local zsh config
+dot_config/zsh/custom/local.zsh
