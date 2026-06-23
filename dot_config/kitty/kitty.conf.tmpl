@@ -100,10 +100,13 @@ map {{ $mod }}+9 goto_tab 9
 # Buffer: keep more history; ~50MB RAM.
 scrollback_lines 50000
 
-# Pager: open scrollback in Neovim via temp-file handoff. The terminal buffer
-# inside nvim renders ANSI colors natively. Cursor at end; quit with <C-\><C-n>:q.
-scrollback_pager nvim --noplugin -c "set signcolumn=no showtabline=0" -c "silent write! /tmp/kitty_scrollback_buffer" -c 'autocmd TermOpen * normal! G_' -c "te cat /tmp/kitty_scrollback_buffer - "
-# scrollback_pager nvim --cmd 'set eventignore=FileType' +'nnoremap q ZQ' +'call nvim_open_term(0, {})' +'set readonly nolist' +'$' -
+# Pager: open scrollback in Neovim
+scrollback_pager nvim --noplugin
+  \ --cmd 'set eventignore=FileType signcolumn=no showtabline=0'
+  \ +'nnoremap q ZQ'
+  \ +'call nvim_open_term(0, {})'
+  \ +'set readonly nolist'
+  \ +'$' -
 
 # Separate buffer (MB) for the pager view. Bump if you page through huge logs.
 scrollback_pager_history_size 512
