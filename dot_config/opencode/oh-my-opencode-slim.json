@@ -1,35 +1,24 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
-  "preset": "hybrid",
+  "preset": "neuralwatt",
   "presets": {
     "openai": {
       "orchestrator": {
         "model": "openai/gpt-5.5",
-        "skills": [
-          "*"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
       },
       "oracle": {
         "model": "openai/gpt-5.5",
         "variant": "high",
-        "skills": [
-          "simplify"
-        ],
+        "skills": ["simplify"],
         "mcps": []
       },
       "librarian": {
         "model": "openai/gpt-5.4-mini",
         "variant": "low",
         "skills": [],
-        "mcps": [
-          "websearch",
-          "context7",
-          "grep_app"
-        ]
+        "mcps": ["websearch", "context7", "grep_app"]
       },
       "explorer": {
         "model": "openai/gpt-5.4-mini",
@@ -40,9 +29,7 @@
       "designer": {
         "model": "openai/gpt-5.4-mini",
         "variant": "medium",
-        "skills": [
-          "agent-browser"
-        ],
+        "skills": ["agent-browser"],
         "mcps": []
       },
       "fixer": {
@@ -55,20 +42,13 @@
     "opencode-go": {
       "orchestrator": {
         "model": "opencode-go/glm-5.1",
-        "skills": [
-          "*"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
       },
       "oracle": {
         "model": "opencode-go/deepseek-v4-pro",
         "variant": "max",
-        "skills": [
-          "simplify"
-        ],
+        "skills": ["simplify"],
         "mcps": []
       },
       "council": {
@@ -80,11 +60,7 @@
       "librarian": {
         "model": "opencode-go/minimax-m2.7",
         "skills": [],
-        "mcps": [
-          "websearch",
-          "context7",
-          "grep_app"
-        ]
+        "mcps": ["websearch", "context7", "grep_app"]
       },
       "explorer": {
         "model": "opencode-go/minimax-m2.7",
@@ -94,9 +70,7 @@
       "designer": {
         "model": "opencode-go/kimi-k2.6",
         "variant": "medium",
-        "skills": [
-          "agent-browser"
-        ],
+        "skills": ["agent-browser"],
         "mcps": []
       },
       "fixer": {
@@ -115,21 +89,13 @@
       "orchestrator": {
         "model": "neuralwatt/minimax-m3",
         "variant": "thinking",
-        "skills": [
-          "*",
-          "!find-docs"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
+        "skills": ["*", "!find-docs"],
+        "mcps": ["*", "!context7"]
       },
       "oracle": {
         "model": "opencode-go/deepseek-v4-pro",
         "variant": "max",
-        "skills": [
-          "simplify"
-        ],
+        "skills": ["simplify"],
         "mcps": []
       },
       "council": {
@@ -140,14 +106,8 @@
       },
       "librarian": {
         "model": "opencode-go/deepseek-v4-flash",
-        "skills": [
-          "find-docs"
-        ],
-        "mcps": [
-          "websearch",
-          "context7",
-          "grep_app"
-        ]
+        "skills": ["find-docs"],
+        "mcps": ["websearch", "context7", "grep_app"]
       },
       "explorer": {
         "model": "opencode-go/deepseek-v4-flash",
@@ -157,9 +117,7 @@
       "designer": {
         "model": "opencode-go/minimax-m3",
         "variant": "thinking",
-        "skills": [
-          "agent-browser"
-        ],
+        "skills": ["agent-browser"],
         "mcps": []
       },
       "fixer": {
@@ -179,21 +137,13 @@
       "orchestrator": {
         "model": "neuralwatt/glm-5.2",
         "variant": "max",
-        "skills": [
-          "*",
-          "!find-docs"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
+        "skills": ["*", "!find-docs"],
+        "mcps": ["*", "!context7"]
       },
       "oracle": {
-        "model": "neuralwatt/deepseek-v4-pro",
+        "model": "opencode-go/deepseek-v4-pro",
         "variant": "max",
-        "skills": [
-          "simplify"
-        ],
+        "skills": ["simplify"],
         "mcps": []
       },
       "council": {
@@ -204,14 +154,8 @@
       },
       "librarian": {
         "model": "opencode-go/deepseek-v4-flash",
-        "skills": [
-          "find-docs"
-        ],
-        "mcps": [
-          "websearch",
-          "context7",
-          "grep_app"
-        ]
+        "skills": ["find-docs"],
+        "mcps": ["websearch", "context7", "grep_app"]
       },
       "explorer": {
         "model": "opencode-go/deepseek-v4-flash",
@@ -221,9 +165,7 @@
       "designer": {
         "model": "neuralwatt/glm-5.2",
         "variant": "high",
-        "skills": [
-          "agent-browser"
-        ],
+        "skills": ["agent-browser"],
         "mcps": []
       },
       "fixer": {
@@ -234,6 +176,54 @@
       },
       "observer": {
         "model": "opencode-go/mimo-v2.5",
+        "variant": "high",
+        "skills": [],
+        "mcps": []
+      }
+    },
+    "neuralwatt": {
+      "orchestrator": {
+        "model": "neuralwatt/glm-5.2",
+        "variant": "max",
+        "skills": ["*", "!find-docs"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "neuralwatt/glm-5.2-short",
+        "variant": "max",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "council": {
+        "model": "neuralwatt/moonshotai/Kimi-K2.7-Code",
+        "variant": "high",
+        "skills": [],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "neuralwatt/moonshotai/Kimi-K2.6",
+        "skills": ["find-docs"],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": "neuralwatt/moonshotai/Kimi-K2.6",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": "neuralwatt/glm-5.2-short",
+        "variant": "max",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "neuralwatt/moonshotai/Kimi-K2.7-Code",
+        "variant": "high",
+        "skills": [],
+        "mcps": []
+      },
+      "observer": {
+        "model": "neuralwatt/moonshotai/Kimi-K2.6",
         "variant": "high",
         "skills": [],
         "mcps": []
