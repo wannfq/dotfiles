@@ -28,10 +28,11 @@ task:
 serviceTier: none
 hideThinkingBlock: false
 providers:
-  webSearch: exa
+  webSearch: searxng
 setupVersion: 1
 theme:
   dark: dark
+  light: light
 tui:
   textSizing: true
   hyperlinks: auto
@@ -57,3 +58,6 @@ browser:
 advisor:
   enabled: true
   subagents: true
+searxng:
+  endpoint: http://127.0.0.1:8888
+
