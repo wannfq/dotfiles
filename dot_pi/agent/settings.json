@@ -1,0 +1,41 @@
+{
+  "lastChangelogVersion": "0.80.3",
+  "defaultProvider": "neuralwatt",
+  "defaultModel": "glm-5.2",
+  "packages": [
+    "npm:@juicesharp/rpiv-pi",
+    "npm:pi-lens",
+    "npm:@ff-labs/pi-fff",
+    "npm:@wierdbytes/pi-peon",
+    "npm:@tintinweb/pi-subagents",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@juicesharp/rpiv-advisor",
+    "npm:@juicesharp/rpiv-i18n",
+    "npm:@juicesharp/rpiv-web-tools",
+    "npm:@juicesharp/rpiv-args",
+    "npm:@juicesharp/rpiv-workflow"
+  ],
+  "defaultThinkingLevel": "high",
+  "powerline": {
+    "preset": "default",
+    "fixedEditor": false
+  },
+  "hideThinkingBlock": true,
+  "terminal": {
+    "imageWidthCells": 120
+  },
+  "theme": "dark",
+  "enabledModels": [
+    "opencode-go/deepseek-v4-flash",
+    "opencode-go/deepseek-v4-pro",
+    "opencode-go/minimax-m3",
+    "neuralwatt/glm-5.2",
+    "neuralwatt/glm-5.2-flex",
+    "neuralwatt/glm-5.2-short",
+    "neuralwatt/kimi-k2.6",
+    "neuralwatt/kimi-k2.6-flex",
+    "neuralwatt/kimi-k2.7-code",
+    "neuralwatt/kimi-k2.7-code-flex"
+  ]
+}

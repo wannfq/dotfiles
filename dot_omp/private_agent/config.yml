@@ -6,15 +6,15 @@ display:
   shimmer: classic
   showTokenUsage: true
 modelRoles:
-  default: opencode-go/minimax-m3:auto
+  default: neuralwatt/glm-5.2-short:auto
   smol: opencode-go/deepseek-v4-flash:auto
-  slow: opencode-go/deepseek-v4-pro:xhigh
-  task: opencode-go/deepseek-v4-flash:xhigh
-  plan: opencode-go/minimax-m3:xhigh
+  slow: neuralwatt/glm-5.2-flex:auto
+  task: opencode-go/deepseek-v4-pro:auto
+  plan: neuralwatt/glm-5.2:high
   commit: opencode-go/deepseek-v4-flash:low
-  vision: opencode-go/mimo-v2.5:high
-  designer: opencode-go/minimax-m3:high
-  advisor: opencode-go/deepseek-v4-flash:low
+  vision: neuralwatt/kimi-k2.6-flex:high
+  designer: neuralwatt/kimi-k2.7-code:high
+  advisor: opencode-go/deepseek-v4-flash:medium
 symbolPreset: nerd
 defaultThinkingLevel: auto
 memory:
@@ -25,7 +25,6 @@ task:
   disabledAgents: []
   showResolvedModelBadge: true
   eager: preferred
-serviceTier: none
 hideThinkingBlock: false
 providers:
   webSearch: searxng
@@ -60,4 +59,7 @@ advisor:
   subagents: true
 searxng:
   endpoint: http://127.0.0.1:8888
-
+disabledProviders:
+  - ollama
+  - llama.cpp
+  - lm-studio
