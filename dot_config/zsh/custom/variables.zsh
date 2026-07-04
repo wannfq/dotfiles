@@ -29,3 +29,6 @@ export POWERLINE_NERD_FONTS=1
 
 # SearXNG
 export SEARXNG_URL="http://localhost:8888"
+
+# OpenCode background subagents config
+export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
