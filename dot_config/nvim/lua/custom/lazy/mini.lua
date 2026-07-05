@@ -5,7 +5,17 @@ return {
         lazy = true,
         event = "VeryLazy",
         config = function()
-            require("mini.ai").setup()
+            require("mini.ai").setup {
+                -- `f` is a treesitter-backed function *definition* textobject
+                -- (function ... end / def ... end / func ... }), powered by
+                -- nvim-treesitter-textobjects query captures.
+                custom_textobjects = {
+                    f = require("mini.ai").gen_spec.treesitter {
+                        a = { "@function.outer", "@method.outer" },
+                        i = { "@function.inner", "@method.inner" },
+                    },
+                },
+            }
         end,
     },
     {
