@@ -9,184 +9,184 @@
     "presets": {
       "default": {
         "alpha": { "model": "opencode-go/deepseek-v4-flash" },
-        "beta": { "model": "opencode-go/deepseek-v4-flash" }
-      }
-    }
+        "beta": { "model": "opencode-go/deepseek-v4-flash" },
+      },
+    },
   },
   "presets": {
     "openai": {
       "orchestrator": {
         "model": "openai/gpt-5.5",
         "skills": ["*"],
-        "mcps": ["*", "!context7"]
+        "mcps": ["*", "!context7"],
       },
       "oracle": {
         "model": "openai/gpt-5.5",
         "variant": "high",
         "skills": ["simplify"],
-        "mcps": []
+        "mcps": [],
       },
       "librarian": {
         "model": "openai/gpt-5.4-mini",
         "variant": "low",
         "skills": [],
-        "mcps": ["websearch", "context7", "grep_app"]
+        "mcps": ["websearch", "context7", "grep_app"],
       },
       "explorer": {
         "model": "openai/gpt-5.4-mini",
         "variant": "low",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "designer": {
         "model": "openai/gpt-5.4-mini",
         "variant": "medium",
         "skills": ["agent-browser"],
-        "mcps": []
+        "mcps": [],
       },
       "fixer": {
         "model": "openai/gpt-5.4-mini",
         "variant": "low",
         "skills": [],
-        "mcps": []
-      }
+        "mcps": [],
+      },
     },
     "opencode-go": {
       "orchestrator": {
         "model": "opencode-go/glm-5.2",
-        "skills": ["*"],
-        "mcps": ["*", "!context7"]
+        "variant": "high",
+        "skills": ["*", "!find-docs"],
+        "mcps": ["*", "!context7"],
       },
       "oracle": {
-        "model": "opencode-go/deepseek-v4-pro",
+        "model": "opencode-go/glm-5.2",
         "variant": "max",
         "skills": ["simplify"],
-        "mcps": []
+        "mcps": [],
       },
       "council": {
         "model": "opencode-go/deepseek-v4-pro",
         "variant": "medium",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "librarian": {
         "model": "opencode-go/deepseek-v4-flash",
         "skills": [],
-        "mcps": ["websearch", "context7", "grep_app"]
+        "mcps": ["websearch", "context7", "grep_app"],
       },
       "explorer": {
         "model": "opencode-go/deepseek-v4-flash",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "designer": {
         "model": "opencode-go/kimi-k2.7-code",
         "skills": ["agent-browser"],
-        "mcps": []
+        "mcps": [],
       },
       "fixer": {
         "model": "opencode-go/deepseek-v4-pro",
         "variant": "medium",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "observer": {
         "model": "opencode-go/kimi-k2.6",
         "skills": [],
-        "mcps": []
-      }
+        "mcps": [],
+      },
     },
     "hybrid": {
       "orchestrator": {
-        "model": "neuralwatt/glm-5.2",
+        "model": "neuralwatt/glm-5.2-short-flex",
         "variant": "high",
         "skills": ["*", "!find-docs"],
-        "mcps": ["*", "!context7"]
+        "mcps": ["*", "!context7"],
       },
       "oracle": {
-        "model": "neuralwatt/glm-5.2",
+        "model": "neuralwatt/glm-5.2-flex",
         "variant": "max",
         "skills": ["simplify"],
-        "mcps": []
+        "mcps": [],
       },
       "council": {
         "model": "opencode-go/deepseek-v4-pro",
         "variant": "high",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "librarian": {
         "model": "opencode-go/deepseek-v4-flash",
         "skills": ["find-docs"],
-        "mcps": ["websearch", "context7", "grep_app"]
+        "mcps": ["websearch", "context7", "grep_app"],
       },
       "explorer": {
         "model": "opencode-go/deepseek-v4-flash",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "designer": {
         "model": "neuralwatt/moonshotai/Kimi-K2.7-Code",
         "skills": ["agent-browser"],
-        "mcps": []
+        "mcps": [],
       },
       "fixer": {
         "model": "opencode-go/deepseek-v4-pro",
         "variant": "medium",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "observer": {
         "model": "neuralwatt/moonshotai/Kimi-K2.6",
         "skills": [],
-        "mcps": []
-      }
+        "mcps": [],
+      },
     },
     "neuralwatt": {
       "orchestrator": {
-        "model": "neuralwatt/glm-5.2",
+        "model": "neuralwatt/glm-5.2-short-flex",
         "variant": "high",
         "skills": ["*", "!find-docs"],
-        "mcps": ["*", "!context7"]
+        "mcps": ["*", "!context7"],
       },
       "oracle": {
-        "model": "neuralwatt/glm-5.2-short",
+        "model": "neuralwatt/glm-5.2-short-flex",
         "variant": "high",
         "skills": ["simplify"],
-        "mcps": []
+        "mcps": [],
       },
       "council": {
-        "model": "neuralwatt/moonshotai/Kimi-K2.7-Code",
-        "variant": "high",
+        "model": "neuralwatt/kimi-k2.7-code-flex",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "librarian": {
-        "model": "neuralwatt/moonshotai/Kimi-K2.6",
+        "model": "neuralwatt/kimi-k2.6-flex",
         "skills": ["find-docs"],
-        "mcps": ["websearch", "context7", "grep_app"]
+        "mcps": ["websearch", "context7", "grep_app"],
       },
       "explorer": {
-        "model": "neuralwatt/moonshotai/Kimi-K2.6",
+        "model": "neuralwatt/kimi-K2.6-flex",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "designer": {
-        "model": "neuralwatt/glm-5.2-short",
+        "model": "neuralwatt/glm-5.2-short-flex",
         "variant": "high",
         "skills": ["agent-browser"],
-        "mcps": []
+        "mcps": [],
       },
       "fixer": {
-        "model": "neuralwatt/moonshotai/Kimi-K2.7-Code",
+        "model": "neuralwatt/kimi-k2.7-code-flex",
         "skills": [],
-        "mcps": []
+        "mcps": [],
       },
       "observer": {
-        "model": "neuralwatt/moonshotai/Kimi-K2.6",
+        "model": "neuralwatt/kimi-k2.6-flex",
         "skills": [],
-        "mcps": []
-      }
-    }
-  }
+        "mcps": [],
+      },
+    },
+  },
 }

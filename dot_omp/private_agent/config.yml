@@ -8,7 +8,7 @@ display:
 modelRoles:
   default: neuralwatt/glm-5.2-short:auto
   smol: opencode-go/deepseek-v4-flash:auto
-  slow: neuralwatt/glm-5.2-flex:auto
+  slow: opencode-go/glm-5.2:auto
   task: opencode-go/deepseek-v4-pro:auto
   plan: neuralwatt/glm-5.2:high
   commit: opencode-go/deepseek-v4-flash:low
