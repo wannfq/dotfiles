@@ -10,10 +10,10 @@ modelRoles:
   smol: opencode-go/deepseek-v4-flash:auto
   slow: opencode-go/glm-5.2:auto
   task: opencode-go/deepseek-v4-pro:auto
-  plan: neuralwatt/glm-5.2:high
+  plan: neuralwatt/glm-5.2-flex:high
   commit: opencode-go/deepseek-v4-flash:low
   vision: neuralwatt/kimi-k2.6-flex:high
-  designer: neuralwatt/kimi-k2.7-code:high
+  designer: neuralwatt/kimi-k2.7-code-flex:high
   advisor: opencode-go/deepseek-v4-flash:medium
 symbolPreset: nerd
 defaultThinkingLevel: auto
