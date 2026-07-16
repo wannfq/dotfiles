@@ -6,15 +6,16 @@ display:
   shimmer: classic
   showTokenUsage: true
 modelRoles:
-  default: neuralwatt/glm-5.2-short:auto
-  smol: opencode-go/deepseek-v4-flash:auto
-  slow: opencode-go/glm-5.2:auto
-  task: opencode-go/deepseek-v4-pro:auto
-  plan: neuralwatt/glm-5.2-flex:high
+  smol: opencode-go/deepseek-v4-pro:high
+  slow: openai-codex/gpt-5.6-terra:high
+  task: opencode-go/deepseek-v4-pro:high
+  plan: openai-codex/gpt-5.6-sol:medium
   commit: opencode-go/deepseek-v4-flash:low
-  vision: neuralwatt/kimi-k2.6-flex:high
-  designer: neuralwatt/kimi-k2.7-code-flex:high
+  vision: opencode-go/kimi-k2.6:medium
+  designer: opencode-go/glm-5.2:max
   advisor: opencode-go/deepseek-v4-flash:medium
+  default: openai-codex/gpt-5.6-luna:high
+  tiny: opencode-go/deepseek-v4-flash:high
 symbolPreset: nerd
 defaultThinkingLevel: auto
 memory:

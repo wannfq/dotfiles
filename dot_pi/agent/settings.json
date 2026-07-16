@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.80.6",
-  "defaultProvider": "neuralwatt",
-  "defaultModel": "kimi-k2.7-code-flex",
+  "lastChangelogVersion": "0.80.7",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-luna",
   "packages": [
     "git:github.com/wannfq/pi-clean-look",
     "npm:@juicesharp/rpiv-pi",
@@ -39,7 +39,10 @@
     "neuralwatt/kimi-k2.6",
     "neuralwatt/kimi-k2.6-flex",
     "neuralwatt/kimi-k2.7-code",
-    "neuralwatt/kimi-k2.7-code-flex"
+    "neuralwatt/kimi-k2.7-code-flex",
+    "openai-codex/gpt-5.6-terra",
+    "openai-codex/gpt-5.6-luna",
+    "openai-codex/gpt-5.6-sol"
   ],
   "quietStartup": true
 }
