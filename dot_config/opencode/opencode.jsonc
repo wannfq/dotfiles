@@ -28,7 +28,6 @@
     }
   },
   "plugin": [
-    "@tarquinen/opencode-dcp",
     "oh-my-opencode-slim",
     "@slkiser/opencode-quota"
   ],
