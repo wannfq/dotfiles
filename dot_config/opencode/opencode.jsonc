@@ -10,14 +10,6 @@
     "port": 4096
   },
   "mcp": {
-    "sequential-thinking": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
-    },
     "github": {
       "enabled": false,
       "type": "remote",

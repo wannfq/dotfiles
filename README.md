@@ -166,7 +166,7 @@ Custom JSONC layout with Nerd Font icons. Sections: Hardware (green), Software (
 ### opencode
 
 AI coding agent with multi-layer config:
-- `opencode.jsonc` — MCP servers (sequential-thinking), permissions, plugins, agent colors
+- `opencode.jsonc` — MCP servers, permissions, plugins, agent colors
 - `oh-my-opencode-slim.json` — Model presets (cheap, openai, opencode-go) mapping agent roles
 - `tui.json` — TUI keybinds: leader `ctrl+space`
 
