@@ -1,12 +1,14 @@
 statusLine:
-  separator: powerline-thin
+  separator: ascii
   preset: default
   sessionAccent: false
+  transparent: true
 display:
   shimmer: classic
   showTokenUsage: true
 modelRoles:
   smol: opencode-go/deepseek-v4-pro:high
+  default: openai-codex/gpt-5.6-terra:medium
   slow: openai-codex/gpt-5.6-terra:high
   task: opencode-go/deepseek-v4-pro:high
   plan: openai-codex/gpt-5.6-sol:medium
@@ -14,7 +16,6 @@ modelRoles:
   vision: opencode-go/kimi-k2.6:medium
   designer: opencode-go/glm-5.2:max
   advisor: opencode-go/deepseek-v4-flash:medium
-  default: openai-codex/gpt-5.6-luna:high
   tiny: opencode-go/deepseek-v4-flash:high
 symbolPreset: nerd
 defaultThinkingLevel: auto
@@ -31,8 +32,8 @@ providers:
   webSearch: searxng
 setupVersion: 1
 theme:
-  dark: dark
-  light: light
+  dark: dark-catppuccin
+  light: light-catppuccin
 tui:
   textSizing: true
   hyperlinks: auto

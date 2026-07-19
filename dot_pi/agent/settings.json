@@ -18,11 +18,7 @@
     "npm:@tintinweb/pi-subagents"
   ],
   "defaultThinkingLevel": "medium",
-  "powerline": {
-    "preset": "default",
-    "fixedEditor": false
-  },
-  "hideThinkingBlock": false,
+  "hideThinkingBlock": true,
   "terminal": {
     "imageWidthCells": 120
   },
