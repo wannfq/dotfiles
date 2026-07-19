@@ -1,9 +1,9 @@
 {
-  "lastChangelogVersion": "0.80.7",
+  "lastChangelogVersion": "0.80.10",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-luna",
+  "defaultModel": "gpt-5.6-terra",
   "packages": [
-    "git:github.com/wannfq/pi-clean-look",
+    "npm:pi-cozy-ui",
     "npm:@juicesharp/rpiv-pi",
     "npm:pi-lens",
     "npm:@ff-labs/pi-fff",
@@ -17,7 +17,7 @@
     "npm:@juicesharp/rpiv-workflow",
     "npm:@tintinweb/pi-subagents"
   ],
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "medium",
   "powerline": {
     "preset": "default",
     "fixedEditor": false
@@ -26,7 +26,7 @@
   "terminal": {
     "imageWidthCells": 120
   },
-  "theme": "dark",
+  "theme": "cozy-dark",
   "enabledModels": [
     "opencode-go/deepseek-v4-flash",
     "opencode-go/deepseek-v4-pro",
