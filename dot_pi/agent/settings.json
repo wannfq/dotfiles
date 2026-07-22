@@ -51,7 +51,9 @@
     "npm:@juicesharp/rpiv-web-tools",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:@juicesharp/rpiv-btw",
-    "npm:@mnemosyne-oss/pi-mnemosyne"
+    "npm:@mnemosyne-oss/pi-mnemosyne",
+    "npm:@hypabolic/pi-hypa",
+    "npm:pi-interactive-shell"
   ],
   "defaultThinkingLevel": "medium",
   "hideThinkingBlock": true,
