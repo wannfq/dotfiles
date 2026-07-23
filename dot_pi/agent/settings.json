@@ -1,12 +1,12 @@
 {
   "lastChangelogVersion": "0.81.1",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-terra",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "glm-5.2",
   "subagents": {
     "defaultModel": "opencode-go/deepseek-v4-pro",
     "agentOverrides": {
       "context-builder": {
-        "thinking": "high"
+        "thinking": "xhigh"
       },
       "delegate": {
         "thinking": "medium"
@@ -20,11 +20,11 @@
         "thinking": "high"
       },
       "researcher": {
-        "thinking": "high"
+        "thinking": "xhigh"
       },
       "reviewer": {
         "model": "opencode-go/kimi-k2.7-code",
-        "thinking": "high"
+        "thinking": "xhigh"
       },
       "scout": {
         "thinking": "high"
@@ -55,7 +55,7 @@
     "npm:@hypabolic/pi-hypa",
     "npm:pi-interactive-shell"
   ],
-  "defaultThinkingLevel": "medium",
+  "defaultThinkingLevel": "high",
   "hideThinkingBlock": true,
   "terminal": {
     "imageWidthCells": 120
@@ -76,7 +76,8 @@
     "neuralwatt/kimi-k2.7-code-flex",
     "openai-codex/gpt-5.6-terra",
     "openai-codex/gpt-5.6-luna",
-    "openai-codex/gpt-5.6-sol"
+    "openai-codex/gpt-5.6-sol",
+    "opencode-go/kimi-k3"
   ],
   "quietStartup": true
 }
