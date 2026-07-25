@@ -3,9 +3,5 @@
   "keybinds": {
     "leader": "ctrl+space"
   },
-  "plugin": [
-    "oh-my-opencode-slim",
-    "@slkiser/opencode-quota",
-    "oc-tps@latest"
-  ]
+  "plugin": ["oh-my-opencode-slim"]
 }

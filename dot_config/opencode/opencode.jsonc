@@ -3,7 +3,6 @@
   "plugin": [
     "oh-my-opencode-slim",
     "opencode-mnemosyne-oss",
-    "@slkiser/opencode-quota"
   ],
   "permission": {
     "skill": {

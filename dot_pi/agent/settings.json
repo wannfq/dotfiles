@@ -1,40 +1,45 @@
 {
-  "lastChangelogVersion": "0.81.1",
-  "defaultProvider": "opencode-go",
-  "defaultModel": "glm-5.2",
+  "lastChangelogVersion": "0.82.1",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "medium",
+  "hideThinkingBlock": false,
   "subagents": {
     "defaultModel": "opencode-go/deepseek-v4-pro",
     "agentOverrides": {
       "context-builder": {
-        "thinking": "xhigh"
+        "model": "opencode-go/glm-5.2",
+        "thinking": "high"
       },
       "delegate": {
-        "thinking": "medium"
+        "thinking": "high"
       },
       "oracle": {
         "model": "openai-codex/gpt-5.6-sol",
-        "thinking": "medium"
+        "thinking": "high"
       },
       "planner": {
         "model": "openai-codex/gpt-5.6-terra",
         "thinking": "high"
       },
       "researcher": {
-        "thinking": "xhigh"
+        "model": "opencode-go/kimi-k2.7-code",
+        "thinking": "high"
       },
       "reviewer": {
-        "model": "opencode-go/kimi-k2.7-code",
-        "thinking": "xhigh"
+        "model": "opencode-go/glm-5.2",
+        "thinking": "high"
       },
       "scout": {
         "thinking": "high"
       },
       "worker": {
-        "model": "openai-codex/gpt-5.6-terra",
+        "model": "opencode-go/kimi-k2.7-code",
         "thinking": "high"
       }
     },
     "watchdog": {
+      "enabled": true,
       "main": {
         "model": "openai-codex/gpt-5.6-terra",
         "thinking": "high"
@@ -53,10 +58,9 @@
     "npm:@juicesharp/rpiv-btw",
     "npm:@mnemosyne-oss/pi-mnemosyne",
     "npm:@hypabolic/pi-hypa",
-    "npm:pi-interactive-shell"
+    "npm:pi-interactive-shell",
+    "npm:pi-agent-browser-native"
   ],
-  "defaultThinkingLevel": "high",
-  "hideThinkingBlock": true,
   "terminal": {
     "imageWidthCells": 120
   },
