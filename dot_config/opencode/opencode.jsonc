@@ -1,10 +1,15 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "oh-my-opencode-slim",
+    "opencode-mnemosyne-oss",
+    "@slkiser/opencode-quota"
+  ],
   "permission": {
     "skill": {
       "*": "allow"
     },
-    "github_*": "ask"
+    "github_*": "allow"
   },
   "server": {
     "port": 4096
@@ -19,10 +24,6 @@
       }
     }
   },
-  "plugin": [
-    "oh-my-opencode-slim",
-    "@slkiser/opencode-quota"
-  ],
   "agent": {
     "explore": {
       "disable": true
