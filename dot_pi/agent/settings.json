@@ -1,9 +1,9 @@
 {
   "lastChangelogVersion": "0.82.1",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-sol",
-  "defaultThinkingLevel": "medium",
-  "hideThinkingBlock": false,
+  "defaultModel": "gpt-5.6-terra",
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": true,
   "subagents": {
     "defaultModel": "opencode-go/deepseek-v4-pro",
     "agentOverrides": {
@@ -59,7 +59,8 @@
     "npm:@mnemosyne-oss/pi-mnemosyne",
     "npm:@hypabolic/pi-hypa",
     "npm:pi-interactive-shell",
-    "npm:pi-agent-browser-native"
+    "npm:pi-agent-browser-native",
+    "npm:@wannfq/pi-meter"
   ],
   "terminal": {
     "imageWidthCells": 120
