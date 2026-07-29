@@ -7,15 +7,15 @@ display:
   shimmer: classic
   showTokenUsage: true
 modelRoles:
-  smol: opencode-go/deepseek-v4-pro:high
-  default: openai-codex/gpt-5.6-terra:medium
-  slow: openai-codex/gpt-5.6-terra:high
+  smol: opencode-go/deepseek-v4-flash:max
+  default: openai-codex/gpt-5.6-luna:high
+  slow: openai-codex/gpt-5.6-luna:xhigh
   task: opencode-go/deepseek-v4-pro:high
   plan: openai-codex/gpt-5.6-sol:medium
-  commit: opencode-go/deepseek-v4-flash:low
+  commit: opencode-go/deepseek-v4-flash:high
   vision: opencode-go/kimi-k2.6:medium
   designer: opencode-go/glm-5.2:max
-  advisor: opencode-go/deepseek-v4-flash:medium
+  advisor: opencode-go/deepseek-v4-flash:high
   tiny: opencode-go/deepseek-v4-flash:high
 symbolPreset: nerd
 defaultThinkingLevel: auto
@@ -29,7 +29,30 @@ task:
   eager: preferred
 hideThinkingBlock: false
 providers:
-  webSearch: searxng
+  webSearchOrder:
+    - searxng
+    - perplexity
+    - gemini
+    - anthropic
+    - codex
+    - xai
+    - zai
+    - exa
+    - tinyfish
+    - jina
+    - kagi
+    - tavily
+    - firecrawl
+    - brave
+    - kimi
+    - parallel
+    - synthetic
+    - startpage
+    - duckduckgo
+    - ecosia
+    - google
+    - mojeek
+    - public
 setupVersion: 1
 theme:
   dark: dark-catppuccin
@@ -46,7 +69,7 @@ retry:
   modelFallback: true
   maxRetries: 5
 inspect_image:
-  enabled: true
+  mode: "on"
 github:
   enabled: true
 vault:
@@ -65,3 +88,5 @@ disabledProviders:
   - ollama
   - llama.cpp
   - lm-studio
+dev:
+  autoqaConsent: granted
