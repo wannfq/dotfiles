@@ -5,10 +5,10 @@
   "defaultThinkingLevel": "medium",
   "hideThinkingBlock": true,
   "subagents": {
-    "defaultModel": "opencode-go/deepseek-v4-pro",
+    "defaultModel": "openai-codex/gpt-5.6-luna",
     "agentOverrides": {
       "context-builder": {
-        "model": "opencode-go/glm-5.2",
+        "model": "opencode-go/deepseek-v4-pro",
         "thinking": "high"
       },
       "delegate": {
@@ -16,14 +16,13 @@
       },
       "oracle": {
         "model": "openai-codex/gpt-5.6-sol",
-        "thinking": "high"
+        "thinking": "medium"
       },
       "planner": {
         "model": "openai-codex/gpt-5.6-terra",
         "thinking": "high"
       },
       "researcher": {
-        "model": "opencode-go/kimi-k2.7-code",
         "thinking": "high"
       },
       "reviewer": {
@@ -34,15 +33,14 @@
         "thinking": "high"
       },
       "worker": {
-        "model": "opencode-go/kimi-k2.7-code",
         "thinking": "high"
       }
     },
     "watchdog": {
       "enabled": true,
       "main": {
-        "model": "openai-codex/gpt-5.6-terra",
-        "thinking": "high"
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "xhigh"
       }
     }
   },
