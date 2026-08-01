@@ -1,13 +1,13 @@
-statusLine: 
+statusLine:
   separator: ascii
   preset: default
   sessionAccent: false
   transparent: true
-display: 
+display:
   shimmer: classic
   showTokenUsage: true
-modelRoles: 
-  smol: opencode-go/deepseek-v4-flash:max
+modelRoles:
+  smol: opencode-go/deepseek-v4-flash:high
   default: openai-codex/gpt-5.6-luna:max
   slow: openai-codex/gpt-5.6-sol:medium
   task: opencode-go/deepseek-v4-flash:max
@@ -19,19 +19,17 @@ modelRoles:
   tiny: opencode-go/deepseek-v4-flash:high
 symbolPreset: nerd
 defaultThinkingLevel: auto
-memory: 
+memory:
   backend: local
-task: 
+task:
   maxConcurrency: 16
-  agentModelOverrides: 
-    {}
-  disabledAgents: 
-    []
+  agentModelOverrides: {}
+  disabledAgents: []
   showResolvedModelBadge: true
   eager: preferred
 hideThinkingBlock: false
-providers: 
-  webSearchOrder: 
+providers:
+  webSearchOrder:
     - searxng
     - perplexity
     - gemini
@@ -56,39 +54,41 @@ providers:
     - mojeek
     - public
 setupVersion: 1
-theme: 
+theme:
   dark: dark-catppuccin
   light: light-catppuccin
-tui: 
+tui:
   textSizing: true
   hyperlinks: auto
-interruptMode: immediate
-marketplace: 
+interruptMode: wait
+marketplace:
   autoUpdate: auto
 repeatToolDescriptions: false
 personality: default
-retry: 
+retry:
   modelFallback: true
   maxRetries: 5
-inspect_image: 
+inspect_image:
   mode: "on"
-github: 
+github:
   enabled: true
-vault: 
+vault:
   enabled: false
 readLineNumbers: true
-secrets: 
+secrets:
   enabled: true
-browser: 
+browser:
   headless: false
-advisor: 
+advisor:
   enabled: true
   subagents: true
-searxng: 
+searxng:
   endpoint: http://127.0.0.1:8888
-disabledProviders: 
+disabledProviders:
   - ollama
   - llama.cpp
   - lm-studio
-dev: 
+dev:
   autoqaConsent: granted
+steeringMode: one-at-a-time
+followUpMode: one-at-a-time
