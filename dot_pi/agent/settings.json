@@ -1,46 +1,46 @@
 {
   "lastChangelogVersion": "0.83.0",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-terra",
-  "defaultThinkingLevel": "medium",
+  "defaultModel": "gpt-5.6-luna",
+  "defaultThinkingLevel": "max",
   "hideThinkingBlock": true,
   "subagents": {
-    "defaultModel": "openai-codex/gpt-5.6-luna",
+    "defaultModel": "opencode-go/deepseek-v4-flash",
     "agentOverrides": {
       "context-builder": {
-        "model": "opencode-go/deepseek-v4-pro",
-        "thinking": "high"
+        "thinking": "max"
       },
       "delegate": {
-        "thinking": "high"
+        "thinking": "max"
       },
       "oracle": {
         "model": "openai-codex/gpt-5.6-sol",
         "thinking": "medium"
       },
       "planner": {
-        "model": "openai-codex/gpt-5.6-terra",
-        "thinking": "high"
+        "model": "openai-codex/gpt-5.6-sol",
+        "thinking": "medium"
       },
       "researcher": {
-        "thinking": "high"
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "max"
       },
       "reviewer": {
-        "model": "opencode-go/glm-5.2",
-        "thinking": "high"
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "max"
       },
       "scout": {
-        "thinking": "high"
+        "thinking": "max"
       },
       "worker": {
-        "thinking": "high"
+        "thinking": "max"
       }
     },
     "watchdog": {
       "enabled": true,
       "main": {
-        "model": "openai-codex/gpt-5.6-luna",
-        "thinking": "xhigh"
+        "model": "openai-codex/gpt-5.6-sol",
+        "thinking": "medium"
       }
     }
   },
