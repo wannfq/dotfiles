@@ -31,13 +31,13 @@ hideThinkingBlock: false
 providers:
   webSearchOrder:
     - searxng
+    - exa
+    - codex
     - perplexity
     - gemini
     - anthropic
-    - codex
     - xai
     - zai
-    - exa
     - tinyfish
     - jina
     - kagi
