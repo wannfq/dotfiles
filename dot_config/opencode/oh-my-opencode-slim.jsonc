@@ -120,14 +120,14 @@
     },
     "hybrid": {
       "orchestrator": {
-        "model": "openai/gpt-5.6-luna",
-        "variant": "max",
+        "model": "openai/gpt-5.6-terra",
+        "variant": "xhigh",
         "skills": ["*", "!find-docs"],
         "mcps": ["*", "!context7"],
       },
       "oracle": {
         "model": "openai/gpt-5.6-sol",
-        "variant": "medium",
+        "variant": "high",
         "skills": ["simplify"],
         "mcps": [],
       },

@@ -1,8 +1,8 @@
 {
   "lastChangelogVersion": "0.83.0",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-luna",
-  "defaultThinkingLevel": "max",
+  "defaultModel": "gpt-5.6-terra",
+  "defaultThinkingLevel": "xhigh",
   "hideThinkingBlock": true,
   "subagents": {
     "defaultModel": "opencode-go/deepseek-v4-flash",
@@ -14,8 +14,8 @@
         "thinking": "high"
       },
       "oracle": {
-        "model": "openai-codex/gpt-5.6-luna",
-        "thinking": "max"
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "xhigh"
       },
       "planner": {
         "model": "openai-codex/gpt-5.6-luna",
@@ -27,7 +27,7 @@
       },
       "reviewer": {
         "model": "openai-codex/gpt-5.6-sol",
-        "thinking": "medium"
+        "thinking": "high"
       },
       "scout": {
         "thinking": "high"
@@ -41,7 +41,7 @@
       "enabled": true,
       "main": {
         "model": "openai-codex/gpt-5.6-sol",
-        "thinking": "medium"
+        "thinking": "high"
       }
     }
   },

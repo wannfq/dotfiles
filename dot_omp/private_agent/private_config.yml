@@ -8,13 +8,13 @@ display:
   showTokenUsage: true
 modelRoles:
   smol: opencode-go/deepseek-v4-flash:high
-  default: openai-codex/gpt-5.6-luna:max
-  slow: openai-codex/gpt-5.6-sol:medium
+  default: openai-codex/gpt-5.6-terra:xhigh
+  slow: openai-codex/gpt-5.6-sol:high
   task: opencode-go/deepseek-v4-flash:max
-  plan: openai-codex/gpt-5.6-sol:medium
+  plan: openai-codex/gpt-5.6-sol:high
   commit: opencode-go/deepseek-v4-flash:high
-  vision: opencode-go/kimi-k2.6:medium
-  designer: opencode-go/minimax-m3:xhigh
+  vision: opencode-go/kimi-k2.6:high
+  designer: opencode-go/glm-5.2:max
   advisor: opencode-go/deepseek-v4-flash:max
   tiny: opencode-go/deepseek-v4-flash:high
 symbolPreset: nerd
