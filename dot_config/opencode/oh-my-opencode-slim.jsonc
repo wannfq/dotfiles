@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
-  "preset": "hybrid",
+  "preset": "openai",
   "council": {
     "default_preset": "default",
     "timeout": 120000,
@@ -8,208 +8,268 @@
     "councillor_retries": 3,
     "presets": {
       "default": {
-        "alpha": { 
+        "alpha": {
           "model": "opencode-go/deepseek-v4-flash",
-          "variang": "high",
+          "variang": "high"
         },
         "beta": {
           "model": "openai/gpt-5.6-luna",
-          "variant": "xhigh",
+          "variant": "xhigh"
         }
-      },
-    },
+      }
+    }
   },
   "presets": {
     "openai": {
       "orchestrator": {
-        "model": "openai/gpt-5.6-luna",
-        "variant": "max",
-        "skills": ["*"],
-        "mcps": ["*", "!context7", "!websearch"],
+        "model": "openai/gpt-5.6-terra",
+        "variant": "xhigh",
+        "skills": [
+          "*"
+        ],
+        "mcps": [
+          "*",
+          "!context7",
+          "!websearch"
+        ]
       },
       "oracle": {
         "model": "openai/gpt-5.6-sol",
-        "variant": "medium",
-        "skills": ["simplify"],
-        "mcps": [],
+        "variant": "high",
+        "skills": [
+          "simplify"
+        ],
+        "mcps": []
       },
       "council": {
         "model": "openai/gpt-5.6-luna",
         "variant": "xhigh",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "librarian": {
         "model": "openai/gpt-5.6-luna",
         "variant": "xhigh",
         "skills": [],
-        "mcps": ["websearch", "context7", "grep_app"],
+        "mcps": [
+          "websearch",
+          "context7",
+          "grep_app"
+        ]
       },
       "explorer": {
         "model": "openai/gpt-5.6-luna",
         "variant": "xhigh",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "designer": {
         "model": "openai/gpt-5.6-sol",
         "variant": "medium",
-        "skills": ["agent-browser"],
-        "mcps": [],
+        "skills": [
+          "agent-browser"
+        ],
+        "mcps": []
       },
       "fixer": {
         "model": "openai/gpt-5.6-luna",
         "variant": "xhigh",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "observer": {
         "model": "openai/gpt-5.6-luna",
         "variant": "xhigh",
         "skills": [],
-        "mcps": [],
-      },
+        "mcps": []
+      }
     },
     "opencode-go": {
       "orchestrator": {
         "model": "opencode-go/deepseek-v4-flash",
         "variant": "max",
-        "skills": ["*", "!find-docs"],
-        "mcps": ["*", "!context7"],
+        "skills": [
+          "*",
+          "!find-docs"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
       },
       "oracle": {
         "model": "opencode-go/glm-5.2",
         "variant": "max",
-        "skills": ["simplify"],
-        "mcps": [],
+        "skills": [
+          "simplify"
+        ],
+        "mcps": []
       },
       "council": {
         "model": "opencode-go/deepseek-v4-flash",
         "variant": "high",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "librarian": {
         "model": "opencode-go/deepseek-v4-flash",
         "skills": [],
-        "mcps": ["websearch", "context7", "grep_app"],
+        "mcps": [
+          "websearch",
+          "context7",
+          "grep_app"
+        ]
       },
       "explorer": {
         "model": "opencode-go/deepseek-v4-flash",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "designer": {
         "model": "opencode-go/minimax-m3",
         "variant": "thinking",
-        "skills": ["agent-browser"],
-        "mcps": [],
+        "skills": [
+          "agent-browser"
+        ],
+        "mcps": []
       },
       "fixer": {
         "model": "opencode-go/deepseek-v4-flash",
         "variant": "max",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "observer": {
         "model": "opencode-go/minimax-m3",
         "variant": "thinking",
         "skills": [],
-        "mcps": [],
-      },
+        "mcps": []
+      }
     },
     "hybrid": {
       "orchestrator": {
-        "model": "openai/gpt-5.6-terra",
-        "variant": "xhigh",
-        "skills": ["*", "!find-docs"],
-        "mcps": ["*", "!context7"],
+        "model": "openai/gpt-5.6-luna",
+        "variant": "max",
+        "skills": [
+          "*",
+          "!find-docs"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
       },
       "oracle": {
         "model": "openai/gpt-5.6-sol",
-        "variant": "high",
-        "skills": ["simplify"],
-        "mcps": [],
+        "variant": "medium",
+        "skills": [
+          "simplify"
+        ],
+        "mcps": []
       },
       "council": {
         "model": "opencode-go/deepseek-v4-flash",
         "variant": "max",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "librarian": {
         "model": "opencode-go/deepseek-v4-flash",
-        "skills": ["find-docs"],
-        "mcps": ["websearch", "context7", "grep_app"],
+        "skills": [
+          "find-docs"
+        ],
+        "mcps": [
+          "websearch",
+          "context7",
+          "grep_app"
+        ]
       },
       "explorer": {
         "model": "opencode-go/deepseek-v4-flash",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "designer": {
         "model": "neuralwatt/glm-5.2",
         "variant": "max",
-        "skills": ["agent-browser"],
-        "mcps": [],
+        "skills": [
+          "agent-browser"
+        ],
+        "mcps": []
       },
       "fixer": {
         "model": "openai/gpt-5.6-luna",
         "variant": "max",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "observer": {
         "model": "openai/gpt-5.6-luna",
         "variant": "max",
         "skills": [],
-        "mcps": [],
-      },
+        "mcps": []
+      }
     },
     "neuralwatt": {
       "orchestrator": {
         "model": "neuralwatt/glm-5.2-short-flex",
         "variant": "high",
-        "skills": ["*", "!find-docs"],
-        "mcps": ["*", "!context7"],
+        "skills": [
+          "*",
+          "!find-docs"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
       },
       "oracle": {
         "model": "neuralwatt/glm-5.2-short-flex",
         "variant": "high",
-        "skills": ["simplify"],
-        "mcps": [],
+        "skills": [
+          "simplify"
+        ],
+        "mcps": []
       },
       "council": {
         "model": "neuralwatt/kimi-k2.7-code-flex",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "librarian": {
         "model": "neuralwatt/kimi-k2.6-flex",
-        "skills": ["find-docs"],
-        "mcps": ["websearch", "context7", "grep_app"],
+        "skills": [
+          "find-docs"
+        ],
+        "mcps": [
+          "websearch",
+          "context7",
+          "grep_app"
+        ]
       },
       "explorer": {
         "model": "neuralwatt/kimi-K2.6-flex",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "designer": {
         "model": "neuralwatt/glm-5.2-short-flex",
         "variant": "high",
-        "skills": ["agent-browser"],
-        "mcps": [],
+        "skills": [
+          "agent-browser"
+        ],
+        "mcps": []
       },
       "fixer": {
         "model": "neuralwatt/kimi-k2.7-code-flex",
         "skills": [],
-        "mcps": [],
+        "mcps": []
       },
       "observer": {
         "model": "neuralwatt/kimi-k2.6-flex",
         "skills": [],
-        "mcps": [],
-      },
-    },
-  },
+        "mcps": []
+      }
+    }
+  }
 }

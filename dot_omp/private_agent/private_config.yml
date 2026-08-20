@@ -7,16 +7,16 @@ display:
   shimmer: classic
   showTokenUsage: true
 modelRoles:
-  smol: opencode-go/deepseek-v4-flash:high
+  smol: openai-codex/gpt-5.6-luna:high
   default: openai-codex/gpt-5.6-terra:xhigh
   slow: openai-codex/gpt-5.6-sol:high
-  task: opencode-go/deepseek-v4-flash:max
+  task: openai-codex/gpt-5.6-luna:xhigh
   plan: openai-codex/gpt-5.6-sol:high
-  commit: opencode-go/deepseek-v4-flash:high
-  vision: opencode-go/kimi-k2.6:high
-  designer: opencode-go/glm-5.2:max
-  advisor: opencode-go/deepseek-v4-flash:max
-  tiny: opencode-go/deepseek-v4-flash:high
+  commit: openai-codex/gpt-5.6-luna:medium
+  vision: openai-codex/gpt-5.6-terra:high
+  designer: openai-codex/gpt-5.6-sol:high
+  advisor: openai-codex/gpt-5.6-luna:high
+  tiny: openai-codex/gpt-5.6-luna:high
 symbolPreset: nerd
 defaultThinkingLevel: auto
 memory:
@@ -27,12 +27,14 @@ task:
   disabledAgents: []
   showResolvedModelBadge: true
   eager: preferred
+  agentAdvisor:
+    task: "on"
 hideThinkingBlock: false
 providers:
   webSearchOrder:
-    - searxng
-    - exa
     - codex
+    - exa
+    - searxng
     - perplexity
     - gemini
     - anthropic
@@ -53,7 +55,7 @@ providers:
     - google
     - mojeek
     - public
-setupVersion: 1
+setupVersion: 2
 theme:
   dark: dark-catppuccin
   light: light-catppuccin
@@ -81,7 +83,6 @@ browser:
   headless: false
 advisor:
   enabled: true
-  subagents: true
 searxng:
   endpoint: http://127.0.0.1:8888
 disabledProviders:
@@ -92,3 +93,7 @@ dev:
   autoqaConsent: granted
 steeringMode: one-at-a-time
 followUpMode: one-at-a-time
+composer:
+  shape: rule
+web_search:
+  enabled: true
