@@ -1,7 +1,7 @@
 {
   "lastChangelogVersion": "0.84.2",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-terra",
+  "defaultModel": "gpt-5.6-luna",
   "defaultThinkingLevel": "xhigh",
   "hideThinkingBlock": true,
   "subagents": {
@@ -14,19 +14,18 @@
         "thinking": "xhigh"
       },
       "oracle": {
-        "model": "openai-codex/gpt-5.6-terra",
-        "thinking": "xhigh"
+        "model": "openai-codex/gpt-5.6-sol",
+        "thinking": "medium"
       },
       "planner": {
-        "model": "openai-codex/gpt-5.6-terra",
-        "thinking": "xhigh"
+        "thinking": "max"
       },
       "researcher": {
-        "thinking": "xhigh"
+        "thinking": "max"
       },
       "reviewer": {
         "model": "openai-codex/gpt-5.6-sol",
-        "thinking": "high"
+        "thinking": "medium"
       },
       "scout": {
         "thinking": "xhigh"
@@ -39,7 +38,7 @@
       "enabled": true,
       "main": {
         "model": "openai-codex/gpt-5.6-sol",
-        "thinking": "high"
+        "thinking": "medium"
       }
     }
   },

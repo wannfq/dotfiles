@@ -22,7 +22,7 @@
   "presets": {
     "openai": {
       "orchestrator": {
-        "model": "openai/gpt-5.6-terra",
+        "model": "openai/gpt-5.6-luna",
         "variant": "xhigh",
         "skills": [
           "*"
@@ -35,7 +35,7 @@
       },
       "oracle": {
         "model": "openai/gpt-5.6-sol",
-        "variant": "high",
+        "variant": "medium",
         "skills": [
           "simplify"
         ],
@@ -49,7 +49,7 @@
       },
       "librarian": {
         "model": "openai/gpt-5.6-luna",
-        "variant": "xhigh",
+        "variant": "high",
         "skills": [],
         "mcps": [
           "websearch",
@@ -59,7 +59,7 @@
       },
       "explorer": {
         "model": "openai/gpt-5.6-luna",
-        "variant": "xhigh",
+        "variant": "high",
         "skills": [],
         "mcps": []
       },
@@ -73,13 +73,13 @@
       },
       "fixer": {
         "model": "openai/gpt-5.6-luna",
-        "variant": "xhigh",
+        "variant": "max",
         "skills": [],
         "mcps": []
       },
       "observer": {
         "model": "openai/gpt-5.6-luna",
-        "variant": "xhigh",
+        "variant": "max",
         "skills": [],
         "mcps": []
       }
@@ -90,7 +90,8 @@
         "variant": "max",
         "skills": [
           "*",
-          "!find-docs"
+          "!find-docs",
+          "!websearch"
         ],
         "mcps": [
           "*",
@@ -152,7 +153,8 @@
         "variant": "max",
         "skills": [
           "*",
-          "!find-docs"
+          "!find-docs",
+          "!websearch"
         ],
         "mcps": [
           "*",
@@ -216,7 +218,8 @@
         "variant": "high",
         "skills": [
           "*",
-          "!find-docs"
+          "!find-docs",
+          "!websearch"
         ],
         "mcps": [
           "*",
