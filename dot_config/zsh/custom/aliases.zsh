@@ -28,7 +28,9 @@ alias y=yazi
 # kubectl to k
 alias k=kubectl
 alias kctx=kubectl ctx
+compdef _kubectx kctx
 alias kns=kubectl ns
+compdef _kubens kns
 
 # minikube alias
 alias mk=minikube
