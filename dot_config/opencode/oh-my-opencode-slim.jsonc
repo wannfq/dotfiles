@@ -13,7 +13,7 @@
           "variang": "high"
         },
         "beta": {
-          "model": "openai/gpt-5.6-luna",
+          "model": "openai/gpt-6-luna",
           "variant": "xhigh"
         }
       }
@@ -22,7 +22,7 @@
   "presets": {
     "openai": {
       "orchestrator": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "xhigh",
         "skills": [
           "*"
@@ -34,7 +34,7 @@
         ]
       },
       "oracle": {
-        "model": "openai/gpt-5.6-sol",
+        "model": "openai/gpt-6-sol",
         "variant": "medium",
         "skills": [
           "simplify"
@@ -42,13 +42,13 @@
         "mcps": []
       },
       "council": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "xhigh",
         "skills": [],
         "mcps": []
       },
       "librarian": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "high",
         "skills": [],
         "mcps": [
@@ -58,13 +58,13 @@
         ]
       },
       "explorer": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "high",
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": "openai/gpt-5.6-sol",
+        "model": "openai/gpt-6-sol",
         "variant": "medium",
         "skills": [
           "agent-browser"
@@ -72,13 +72,13 @@
         "mcps": []
       },
       "fixer": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "max",
         "skills": [],
         "mcps": []
       },
       "observer": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "max",
         "skills": [],
         "mcps": []
@@ -149,7 +149,7 @@
     },
     "hybrid": {
       "orchestrator": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "max",
         "skills": [
           "*",
@@ -162,7 +162,7 @@
         ]
       },
       "oracle": {
-        "model": "openai/gpt-5.6-sol",
+        "model": "openai/gpt-6-sol",
         "variant": "medium",
         "skills": [
           "simplify"
@@ -200,13 +200,13 @@
         "mcps": []
       },
       "fixer": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "max",
         "skills": [],
         "mcps": []
       },
       "observer": {
-        "model": "openai/gpt-5.6-luna",
+        "model": "openai/gpt-6-luna",
         "variant": "max",
         "skills": [],
         "mcps": []

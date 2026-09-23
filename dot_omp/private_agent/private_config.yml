@@ -7,16 +7,16 @@ display:
   shimmer: classic
   showTokenUsage: true
 modelRoles:
-  smol: openai-codex/gpt-5.6-luna:high
-  default: openai-codex/gpt-5.6-luna:xhigh
-  slow: openai-codex/gpt-5.6-luna:max
-  task: openai-codex/gpt-5.6-luna:xhigh
-  plan: openai-codex/gpt-5.6-sol:medium
-  commit: openai-codex/gpt-5.6-luna:low
-  vision: openai-codex/gpt-5.6-sol:high
-  designer: openai-codex/gpt-5.6-sol:medium
-  advisor: openai-codex/gpt-5.6-luna:high
-  tiny: openai-codex/gpt-5.6-luna:medium
+  smol: openai-codex/gpt-6-luna:high
+  default: openai-codex/gpt-6-luna:xhigh
+  slow: openai-codex/gpt-6-luna:max
+  task: openai-codex/gpt-6-luna:xhigh
+  plan: openai-codex/gpt-6-sol:medium
+  commit: openai-codex/gpt-6-luna:low
+  vision: openai-codex/gpt-6-sol:high
+  designer: openai-codex/gpt-6-sol:medium
+  advisor: openai-codex/gpt-6-luna:high
+  tiny: openai-codex/gpt-6-luna:medium
 symbolPreset: nerd
 defaultThinkingLevel: auto
 memory:
