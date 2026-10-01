@@ -14,8 +14,8 @@
         "thinking": "xhigh"
       },
       "oracle": {
-        "model": "openai-codex/gpt-6-sol",
-        "thinking": "medium"
+        "model": "openai-codex/gpt-6.1-sol",
+        "thinking": "high"
       },
       "planner": {
         "thinking": "max"
@@ -24,7 +24,7 @@
         "thinking": "max"
       },
       "reviewer": {
-        "model": "openai-codex/gpt-6-sol",
+        "model": "openai-codex/gpt-6.1-sol",
         "thinking": "medium"
       },
       "scout": {
@@ -37,8 +37,8 @@
     "watchdog": {
       "enabled": true,
       "main": {
-        "model": "openai-codex/gpt-6-sol",
-        "thinking": "medium"
+        "model": "openai-codex/gpt-6.1-sol",
+        "thinking": "high"
       }
     }
   },
@@ -76,7 +76,7 @@
     "neuralwatt/kimi-k2.7-code",
     "neuralwatt/kimi-k2.7-code-flex",
     "openai-codex/gpt-6-luna",
-    "openai-codex/gpt-6-sol",
+    "openai-codex/gpt-6.1-sol",
     "opencode-go/kimi-k3"
   ],
   "quietStartup": true

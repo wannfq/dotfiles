@@ -34,8 +34,8 @@
         ]
       },
       "oracle": {
-        "model": "openai/gpt-6-sol",
-        "variant": "medium",
+        "model": "openai/gpt-6.1-sol",
+        "variant": "high",
         "skills": [
           "simplify"
         ],
@@ -64,8 +64,8 @@
         "mcps": []
       },
       "designer": {
-        "model": "openai/gpt-6-sol",
-        "variant": "medium",
+        "model": "openai/gpt-6.1-sol",
+        "variant": "high",
         "skills": [
           "agent-browser"
         ],
@@ -162,8 +162,8 @@
         ]
       },
       "oracle": {
-        "model": "openai/gpt-6-sol",
-        "variant": "medium",
+        "model": "openai/gpt-6.1-sol",
+        "variant": "high",
         "skills": [
           "simplify"
         ],
