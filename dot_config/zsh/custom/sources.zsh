@@ -29,5 +29,8 @@ fi
 # OpenCode completions
 zsh-defer _evalcache opencode completion zsh
 
+# Just completions
+zsh-defer _evalcache just --completions zsh
+
 # OMP completions
 zsh-defer _evalcache omp completions zsh

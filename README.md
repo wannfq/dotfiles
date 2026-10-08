@@ -70,6 +70,7 @@ The install script will automatically:
 | lazydocker | Docker TUI |
 | ripgrep | Fast grep alternative |
 | jq | JSON processor |
+| just | Command runner for project recipes; zsh completions are configured |
 | yq | YAML processor |
 | fd | Modern `find` replacement |
 | fx | Terminal JSON viewer |
