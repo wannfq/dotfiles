@@ -41,6 +41,7 @@ The install script will automatically:
 | --------------------------------- | --------------------------------------------------------------- |
 | `dot_zshenv`                      | Sets XDG base directories and `ZDOTDIR`                         |
 | `dot_config/`                     | Application configs managed by chezmoi                          |
+| `dot_config/mise/config.toml`     | mise-managed runtime and tool versions                             |
 | `dot_omp/`                        | OMP harness agent config                                        |
 | `run_once_before_install.sh.tmpl` | One-time bootstrap: OS detection, package install, plugin setup |
 | `private_dot_gitconfig`           | Git config (delta pager, 1Password SSH signing)                 |
@@ -137,6 +138,10 @@ Key plugins:
 
 Custom functions: `pls` (auto-detect JS package manager), `ss`/`ss-go` (tmux session switcher), `work`/`dotc` (project launchers with fzf), `greo` (git rebase helper).
 
+### mise
+
+`dot_config/mise/config.toml` declares Bun, Go, Lua, Node.js, pnpm, Rust, and uv at `latest`, and Python at major version `3`. The bootstrap installs mise itself but does not install the configured tool versions; run `mise install` to install them.
+
 ### neovim
 
 Full IDE via lazy.nvim. One plugin spec file per plugin under `lua/custom/lazy/`. Includes: LSP (mason + nvim-lspconfig), blink-cmp, treesitter, conform (formatting), gitsigns, snacks, trouble, dap, copilot/codeium, and more. StyLua formatting: 4-space indent, no call parentheses.
@@ -188,7 +193,7 @@ AI coding agent with multi-layer config:
 
 ## Optional Tools
 
-The following are referenced in aliases and functions but are **not** auto-installed by the bootstrap script. Install manually if needed:
+The following tools are referenced in aliases and functions but are **not** installed by the bootstrap script. Go, Bun, and pnpm are configured in mise; run `mise install` to install those versions. Install the remaining optional tools manually if needed:
 
 | Tool                     | Description                                                   |
 | ------------------------ | ------------------------------------------------------------- |

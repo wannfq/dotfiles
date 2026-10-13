@@ -167,6 +167,7 @@ info "Checking core utilities..."
 
 install git git git
 install curl curl curl
+install chezmoi chezmoi chezmoi
 {{ if eq .chezmoi.os "linux" -}}
 {{-   if eq .chezmoi.osRelease.id "arch" }}
 install man man-db man-db
@@ -181,6 +182,7 @@ info "Installing CLI tools..."
 
 #        command     macOS pkg       Arch pkg
 install  nvim        neovim          neovim
+install  tree-sitter tree-sitter-cli tree-sitter-cli
 install  tmux        tmux            tmux
 install  zsh         zsh             zsh
 install  yazi        yazi            yazi
@@ -278,6 +280,30 @@ if ! command_exists opencode; then
     success "OpenCode installed"
 else
     info "OpenCode already installed"
+fi
+
+# =============================================================================
+# Oh My Pi (OMP AI Coding Agent)
+# =============================================================================
+
+if ! command_exists omp; then
+    info "Installing OMP..."
+    curl -fsSL https://omp.sh/install | sh
+    success "OMP installed"
+else
+    info "OMP already installed"
+fi
+
+# =============================================================================
+# Pi (AI Coding Agent)
+# =============================================================================
+
+if ! command_exists pi; then
+    info "Installing Pi..."
+    curl -fsSL https://pi.dev/install.sh | sh
+    success "Pi installed"
+else
+    info "Pi already installed"
 fi
 
 # =============================================================================

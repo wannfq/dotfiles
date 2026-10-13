@@ -21,42 +21,43 @@
 
 ## Features
 
-| Feature | Powered by |
-|---|---|
-| LSP (install, config, diagnostics) | mason, mason-lspconfig, nvim-lspconfig |
-| Completion (snippets, sources) | blink-cmp |
-| Syntax highlighting & text objects | treesitter, treesitter-textobjects |
-| Formatting on save | conform.nvim |
-| Linting on save | nvim-lint |
-| Git signs, blame, hunk nav | gitsigns |
-| Git diff view | diffview |
-| Status line & tab line | lualine, bufferline |
-| File picker, grep, notifications, dashboard | snacks.nvim |
-| Diagnostics list & quickfix | trouble.nvim |
-| Inline diagnostics | tiny-inline-diagnostic |
-| Debugging (breakpoints, ui) | nvim-dap, nvim-dap-ui |
-| AI completion | copilot, codeium |
-| Test runner (jest, vitest) | neotest |
-| Folding | nvim-origami |
-| Text objects, move, split/join | mini (ai, basics, move, splitjoin) |
-| Auto-pair brackets/quotes | ultimate-autopair |
-| Yank highlight & history | yanky |
-| Session restore | session-manager |
-| Chezmoi integration | chezmoi.nvim |
-| OpenCode integration | opencode.nvim |
+| Feature                                     | Powered by                             |
+| ------------------------------------------- | -------------------------------------- |
+| LSP (install, config, diagnostics)          | mason, mason-lspconfig, nvim-lspconfig |
+| Completion (snippets, sources)              | blink-cmp                              |
+| Syntax highlighting & text objects          | treesitter, treesitter-textobjects     |
+| Formatting on save                          | conform.nvim                           |
+| Linting on save                             | nvim-lint                              |
+| Git signs, blame, hunk nav                  | gitsigns                               |
+| Git diff view                               | diffview                               |
+| Status line & tab line                      | lualine, bufferline                    |
+| File picker, grep, notifications, dashboard | snacks.nvim                            |
+| Diagnostics list & quickfix                 | trouble.nvim                           |
+| Inline diagnostics                          | tiny-inline-diagnostic                 |
+| Debugging (breakpoints, ui)                 | nvim-dap, nvim-dap-ui                  |
+| AI completion                               | copilot, codeium                       |
+| Test runner (jest, vitest)                  | neotest                                |
+| Folding                                     | nvim-origami                           |
+| Text objects, move, split/join              | mini (ai, basics, move, splitjoin)     |
+| Auto-pair brackets/quotes                   | ultimate-autopair                      |
+| Yank highlight & history                    | yanky                                  |
+| Session restore                             | session-manager                        |
+| Chezmoi integration                         | chezmoi.nvim                           |
+| OpenCode integration                        | opencode.nvim                          |
+
 ## Keymaps
 
 Leader key: `<Space>`
 
-| Key | Action |
-|---|---|
-| `<Space>sk` | Search keymaps |
-| `<Space>sh` | Search help |
+| Key         | Action                                 |
+| ----------- | -------------------------------------- |
+| `<Space>sk` | Search keymaps                         |
+| `<Space>sh` | Search help                            |
 | `<Space>sf` | Find files (telescope / snacks.picker) |
-| `<Space>sr` | Live grep |
-| `<Space>e` | Toggle file explorer |
-| `<Space>qq` | Quit |
-| `<Space>w` | Save |
+| `<Space>sr` | Live grep                              |
+| `<Space>e`  | Toggle file explorer                   |
+| `<Space>qq` | Quit                                   |
+| `<Space>w`  | Save                                   |
 
 ## Formatting
 
