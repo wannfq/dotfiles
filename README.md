@@ -12,11 +12,13 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 Only `curl` and `git` are required to bootstrap. The install script handles everything else.
 
 **macOS**: Xcode Command Line Tools (for git)
+
 ```sh
 xcode-select --install
 ```
 
 **Arch Linux**: Base packages
+
 ```sh
 sudo pacman -S git curl
 ```
@@ -28,75 +30,80 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply wannfq
 ```
 
 The install script will automatically:
+
 - Install the appropriate package manager (Homebrew on macOS, yay on Arch)
 - Install 30+ CLI tools, dev tools, fonts
 - Configure plugin managers (zimfw, TPM, yazi plugins)
 
 ## Repository Structure
 
-| File/Directory | Purpose |
-|---|---|
-| `dot_zshenv` | Sets XDG base directories and `ZDOTDIR` |
-| `dot_config/` | Application configs managed by chezmoi |
-| `dot_omp/` | OMP harness agent config |
+| File/Directory                    | Purpose                                                         |
+| --------------------------------- | --------------------------------------------------------------- |
+| `dot_zshenv`                      | Sets XDG base directories and `ZDOTDIR`                         |
+| `dot_config/`                     | Application configs managed by chezmoi                          |
+| `dot_omp/`                        | OMP harness agent config                                        |
 | `run_once_before_install.sh.tmpl` | One-time bootstrap: OS detection, package install, plugin setup |
-| `private_dot_gitconfig` | Git config (delta pager, 1Password SSH signing) |
-| `AGENTS.md` | AI assistant guide: architecture, conventions, patterns |
+| `private_dot_gitconfig`           | Git config (delta pager, 1Password SSH signing)                 |
+| `AGENTS.md`                       | AI assistant guide: architecture, conventions, patterns         |
 
 ## Installed Tools
 
 ### Core Utilities
 
-| Tool | Description |
-|---|---|
-| git | Version control |
-| curl | HTTP client |
-| man-db | Manual pages (Arch only — macOS ships its own) |
+| Tool    | Description                                    |
+| ------- | ---------------------------------------------- |
+| git     | Version control                                |
+| curl    | HTTP client                                    |
+| chezmoi | Dotfile manager used to apply this repository  |
+| man-db  | Manual pages (Arch only — macOS ships its own) |
 
 ### CLI Tools
 
-| Tool | Description |
-|---|---|
-| neovim | Modern Vim-based editor |
-| tmux | Terminal multiplexer |
-| zsh | Z shell |
-| yazi | Terminal file manager |
-| fastfetch | System information tool |
-| eza | Modern `ls` replacement |
-| bat | Modern `cat` with syntax highlighting |
-| fzf | Fuzzy finder |
-| zoxide | Smarter `cd` command |
-| lazygit | Git TUI |
-| lazydocker | Docker TUI |
-| ripgrep | Fast grep alternative |
-| jq | JSON processor |
-| just | Command runner for project recipes; zsh completions are configured |
-| yq | YAML processor |
-| fd | Modern `find` replacement |
-| fx | Terminal JSON viewer |
-| curlie | Modern curl wrapper |
-| git-delta | Better git diff |
-| btop | Resource monitor |
-| tealdeer | Fast tldr client |
+| Tool            | Description                            |
+| --------------- | -------------------------------------- |
+| neovim          | Modern Vim-based editor                |
+| tmux            | Terminal multiplexer                   |
+| zsh             | Z shell                                |
+| yazi            | Terminal file manager                  |
+| fastfetch       | System information tool                |
+| eza             | Modern `ls` replacement                |
+| bat             | Modern `cat` with syntax highlighting  |
+| fzf             | Fuzzy finder                           |
+| zoxide          | Smarter `cd` command                   |
+| lazygit         | Git TUI                                |
+| lazydocker      | Docker TUI                             |
+| tree-sitter-cli | CLI for developing Tree-sitter parsers |
+| ripgrep         | Fast grep alternative                  |
+| jq              | JSON processor                         |
+| just            | Command runner for project recipes     |
+| yq              | YAML processor                         |
+| fd              | Modern `find` replacement              |
+| fx              | Terminal JSON viewer                   |
+| curlie          | Modern curl wrapper                    |
+| git-delta       | Better git diff                        |
+| btop            | Resource monitor                       |
+| tealdeer        | Fast tldr client                       |
 
 ### Terminal Emulators
 
-| Tool | Description |
-|---|---|
-| kitty | GPU-based terminal (primary — OS-templated config) |
+| Tool    | Description                                        |
+| ------- | -------------------------------------------------- |
+| kitty   | GPU-based terminal (primary — OS-templated config) |
 | ghostty | GPU-accelerated terminal (secondary — flat config) |
 
 ### Dev Tools
 
-| Tool | Description |
-|---|---|
-| k9s | Kubernetes TUI |
-| kubectl | Kubernetes CLI |
-| krew | kubectl plugin manager |
-| docker | Container runtime |
-| gh | GitHub CLI |
-| mise | Runtime version manager |
-| opencode | AI coding agent for terminal |
+| Tool     | Description                                |
+| -------- | ------------------------------------------ |
+| k9s      | Kubernetes TUI                             |
+| kubectl  | Kubernetes CLI                             |
+| krew     | kubectl plugin manager                     |
+| docker   | Container runtime                          |
+| gh       | GitHub CLI                                 |
+| mise     | Runtime version manager                    |
+| opencode | AI coding agent for terminal               |
+| omp      | Oh My Pi terminal coding agent and harness |
+| pi       | Extensible terminal AI coding agent        |
 
 ### Fonts (Nerd Fonts)
 
@@ -106,12 +113,12 @@ The install script will automatically:
 
 ### Plugin Managers
 
-| Tool | Description |
-|---|---|
-| zimfw | Zsh plugin manager |
-| TPM | Tmux Plugin Manager |
+| Tool      | Description                             |
+| --------- | --------------------------------------- |
+| zimfw     | Zsh plugin manager                      |
+| TPM       | Tmux Plugin Manager                     |
 | lazy.nvim | Neovim plugin manager (auto-bootstraps) |
-| ya (yazi) | Yazi plugin/package manager |
+| ya (yazi) | Yazi plugin/package manager             |
 
 ## Configured Applications
 
@@ -120,6 +127,7 @@ The install script will automatically:
 Modular shell configuration using zimfw. Load order: p10k → zim → sources → path → variables → aliases → fzf → functions → configs → .env.local.
 
 Key plugins:
+
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k) prompt (instant prompt enabled)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting), [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
 - [fzf-tab](https://github.com/Aloxaf/fzf-tab) fuzzy tab completion
@@ -167,6 +175,7 @@ Custom JSONC layout with Nerd Font icons. Sections: Hardware (green), Software (
 ### opencode
 
 AI coding agent with multi-layer config:
+
 - `opencode.jsonc` — MCP servers, permissions, plugins, agent colors
 - `oh-my-opencode-slim.json` — Model presets (cheap, openai, opencode-go) mapping agent roles
 - `tui.json` — TUI keybinds: leader `ctrl+space`
@@ -181,15 +190,15 @@ AI coding agent with multi-layer config:
 
 The following are referenced in aliases and functions but are **not** auto-installed by the bootstrap script. Install manually if needed:
 
-| Tool | Description |
-|---|---|
-| go | Go programming language (PATH config, GOPATH) |
-| minikube | Local Kubernetes cluster (`mk`, `mkk` aliases) |
-| tofu / opentofu | OpenTofu IaC tool (`tf` alias) |
-| bun / pnpm / yarn / deno | JS package managers (used by `pls` function) |
-| orbstack | macOS container runtime (shell integration) |
-| sesh | Tmux session manager (alternative to built-in session picker) |
-| awscli | AWS CLI (used by `awsauth`, `owner`, `awsaccount` functions) |
+| Tool                     | Description                                                   |
+| ------------------------ | ------------------------------------------------------------- |
+| go                       | Go programming language (PATH config, GOPATH)                 |
+| minikube                 | Local Kubernetes cluster (`mk`, `mkk` aliases)                |
+| tofu / opentofu          | OpenTofu IaC tool (`tf` alias)                                |
+| bun / pnpm / yarn / deno | JS package managers (used by `pls` function)                  |
+| orbstack                 | macOS container runtime (shell integration)                   |
+| sesh                     | Tmux session manager (alternative to built-in session picker) |
+| awscli                   | AWS CLI (used by `awsauth`, `owner`, `awsaccount` functions)  |
 
 ## Post-Installation Notes
 
