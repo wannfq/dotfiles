@@ -118,7 +118,7 @@ function sspro() {
 # Work on directory in tmux session. Require fzf installed
 function work() {
     tmux_session='work'
-    base_path=~/projects/
+    base_path=~/Projects/
     sspro $tmux_session $base_path
 }
 
