@@ -283,30 +283,6 @@ else
 fi
 
 # =============================================================================
-# Oh My Pi (OMP AI Coding Agent)
-# =============================================================================
-
-if ! command_exists omp; then
-    info "Installing OMP..."
-    curl -fsSL https://omp.sh/install | sh
-    success "OMP installed"
-else
-    info "OMP already installed"
-fi
-
-# =============================================================================
-# Pi (AI Coding Agent)
-# =============================================================================
-
-if ! command_exists pi; then
-    info "Installing Pi..."
-    curl -fsSL https://pi.dev/install.sh | sh
-    success "Pi installed"
-else
-    info "Pi already installed"
-fi
-
-# =============================================================================
 # zimfw (Zsh Plugin Manager)
 # =============================================================================
 

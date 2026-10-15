@@ -32,5 +32,10 @@ zsh-defer _evalcache opencode completion zsh
 # Just completions
 zsh-defer _evalcache just --completions zsh
 
-# OMP completions
-zsh-defer _evalcache omp completions zsh
+# OMP completions (CLI is not installed by bootstrap)
+if command -v omp >/dev/null 2>&1; then
+    zsh-defer _evalcache omp completions zsh
+fi
+
+# Docker CLI completions
+zsh-defer _evalcache docker completion zsh

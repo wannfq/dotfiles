@@ -42,7 +42,8 @@ The install script will automatically:
 | `dot_zshenv`                      | Sets XDG base directories and `ZDOTDIR`                         |
 | `dot_config/`                     | Application configs managed by chezmoi                          |
 | `dot_config/mise/config.toml`     | mise-managed runtime and tool versions                             |
-| `dot_omp/`                        | OMP harness agent config                                        |
+| `dot_omp/`                        | OMP agent config (CLI not installed by bootstrap)               |
+| `dot_pi/`                         | Pi agent config (CLI not installed by bootstrap)                |
 | `run_once_before_install.sh.tmpl` | One-time bootstrap: OS detection, package install, plugin setup |
 | `private_dot_gitconfig`           | Git config (delta pager, 1Password SSH signing)                 |
 | `AGENTS.md`                       | AI assistant guide: architecture, conventions, patterns         |
@@ -103,8 +104,6 @@ The install script will automatically:
 | gh       | GitHub CLI                                 |
 | mise     | Runtime version manager                    |
 | opencode | AI coding agent for terminal               |
-| omp      | Oh My Pi terminal coding agent and harness |
-| pi       | Extensible terminal AI coding agent        |
 
 ### Fonts (Nerd Fonts)
 
@@ -193,7 +192,7 @@ AI coding agent with multi-layer config:
 
 ## Optional Tools
 
-The following tools are referenced in aliases and functions but are **not** installed by the bootstrap script. Go, Bun, and pnpm are configured in mise; run `mise install` to install those versions. Install the remaining optional tools manually if needed:
+The following tools are referenced by config, aliases, or functions but are **not** installed by the bootstrap script. Go, Bun, and pnpm are configured in mise; run `mise install` to install those versions. Install the remaining optional tools manually if needed. OMP and Pi configs in this repo are applied either way:
 
 | Tool                     | Description                                                   |
 | ------------------------ | ------------------------------------------------------------- |
@@ -204,6 +203,8 @@ The following tools are referenced in aliases and functions but are **not** inst
 | orbstack                 | macOS container runtime (shell integration)                   |
 | sesh                     | Tmux session manager (alternative to built-in session picker) |
 | awscli                   | AWS CLI (used by `awsauth`, `owner`, `awsaccount` functions)  |
+| omp                      | Oh My Pi agent. Config is in `dot_omp/`. Zsh completion loads only when `omp` is on `PATH`. |
+| pi                       | Pi coding agent. Config is in `dot_pi/`.                      |
 
 ## Post-Installation Notes
 

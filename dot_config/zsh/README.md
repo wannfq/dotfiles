@@ -136,7 +136,9 @@ zsh-defer _evalcache opencode completion zsh
 
 ### Optional (referenced but not auto-installed)
 
-- minikube, opentofu, go, bun/pnpm/yarn/deno, orbstack, sesh, awscli
+- minikube, opentofu, go, bun/pnpm/yarn/deno, orbstack, sesh, awscli, omp, pi
+
+OMP and Pi configs live in the repo (`dot_omp/`, `dot_pi/`). The bootstrap does not install either CLI. OMP zsh completion loads only when `omp` is on `PATH`. Pi has no shell completion script.
 
 ## Setup
 

@@ -72,7 +72,8 @@ Both zsh and tmux use the **same session picker script**. The tmux config runs a
 | `dot_config/fastfetch/` | System info display with custom Nerd Font layout |
 | `dot_config/opencode/` | OpenCode AI agent: MCP servers, permissions, agent presets, TUI keybinds |
 | `dot_config/private_k9s/` | k9s Kubernetes TUI: config, aliases, skins, 40+ plugin YAMLs |
-| `dot_omp/` | OMP harness agent config (model roles, providers, features) |
+| `dot_omp/` | OMP agent config (CLI not installed by bootstrap) |
+| `dot_pi/` | Pi agent config (CLI not installed by bootstrap) |
 | `.` (root) | `dot_zshenv`, `run_once_before_install.sh.tmpl`, README |
 
 ## Development Commands
@@ -232,7 +233,7 @@ Dark themes throughout: Catppuccin Mocha is the unifying theme across tmux, ghos
 - **Node.js:** corepack shims installed automatically via `MISE_NODE_COREPACK=true`
 - **Session management:** tmux with TPM, custom fzf session picker
 - **Kubernetes:** k9s with 40+ community plugins plus custom kubectl helpers
-- **AI coding:** OpenCode agent with oh-my-opencode-slim presets; OMP as harness backend
+- **AI coding:** OpenCode agent with oh-my-opencode-slim presets (installed by bootstrap). OMP and Pi configs are in `dot_omp/` and `dot_pi/`; those CLIs are not installed by bootstrap. OMP completion loads only when `omp` is on `PATH`.
 
 ## Testing & QA
 
